@@ -444,7 +444,7 @@ class Recipe final : public ::google::protobuf::Message
   // accessors -------------------------------------------------------
   enum : int {
     kIngrediencesFieldNumber = 4,
-    kJobStepsFieldNumber = 5,
+    kInstructionsFieldNumber = 5,
     kPortionsFieldNumber = 1,
     kActiveTimeFieldNumber = 2,
     kPassiveTimeFieldNumber = 3,
@@ -466,26 +466,26 @@ class Recipe final : public ::google::protobuf::Message
   const ::recipe::Ingredience& ingrediences(int index) const;
   ::recipe::Ingredience* add_ingrediences();
   const ::google::protobuf::RepeatedPtrField<::recipe::Ingredience>& ingrediences() const;
-  // repeated string job_steps = 5;
-  int job_steps_size() const;
+  // repeated string instructions = 5;
+  int instructions_size() const;
   private:
-  int _internal_job_steps_size() const;
+  int _internal_instructions_size() const;
 
   public:
-  void clear_job_steps() ;
-  const std::string& job_steps(int index) const;
-  std::string* mutable_job_steps(int index);
+  void clear_instructions() ;
+  const std::string& instructions(int index) const;
+  std::string* mutable_instructions(int index);
   template <typename Arg_ = const std::string&, typename... Args_>
-  void set_job_steps(int index, Arg_&& value, Args_... args);
-  std::string* add_job_steps();
+  void set_instructions(int index, Arg_&& value, Args_... args);
+  std::string* add_instructions();
   template <typename Arg_ = const std::string&, typename... Args_>
-  void add_job_steps(Arg_&& value, Args_... args);
-  const ::google::protobuf::RepeatedPtrField<std::string>& job_steps() const;
-  ::google::protobuf::RepeatedPtrField<std::string>* mutable_job_steps();
+  void add_instructions(Arg_&& value, Args_... args);
+  const ::google::protobuf::RepeatedPtrField<std::string>& instructions() const;
+  ::google::protobuf::RepeatedPtrField<std::string>* mutable_instructions();
 
   private:
-  const ::google::protobuf::RepeatedPtrField<std::string>& _internal_job_steps() const;
-  ::google::protobuf::RepeatedPtrField<std::string>* _internal_mutable_job_steps();
+  const ::google::protobuf::RepeatedPtrField<std::string>& _internal_instructions() const;
+  ::google::protobuf::RepeatedPtrField<std::string>* _internal_mutable_instructions();
 
   public:
   // uint32 portions = 1;
@@ -524,7 +524,7 @@ class Recipe final : public ::google::protobuf::Message
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<
       3, 5, 1,
-      31, 2>
+      34, 2>
       _table_;
 
   friend class ::google::protobuf::MessageLite;
@@ -542,7 +542,7 @@ class Recipe final : public ::google::protobuf::Message
                           ::google::protobuf::Arena* arena, const Impl_& from,
                           const Recipe& from_msg);
     ::google::protobuf::RepeatedPtrField< ::recipe::Ingredience > ingrediences_;
-    ::google::protobuf::RepeatedPtrField<std::string> job_steps_;
+    ::google::protobuf::RepeatedPtrField<std::string> instructions_;
     ::uint32_t portions_;
     ::uint32_t active_time_;
     ::uint32_t passive_time_;
@@ -806,68 +806,68 @@ Recipe::_internal_mutable_ingrediences() {
   return &_impl_.ingrediences_;
 }
 
-// repeated string job_steps = 5;
-inline int Recipe::_internal_job_steps_size() const {
-  return _internal_job_steps().size();
+// repeated string instructions = 5;
+inline int Recipe::_internal_instructions_size() const {
+  return _internal_instructions().size();
 }
-inline int Recipe::job_steps_size() const {
-  return _internal_job_steps_size();
+inline int Recipe::instructions_size() const {
+  return _internal_instructions_size();
 }
-inline void Recipe::clear_job_steps() {
+inline void Recipe::clear_instructions() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.job_steps_.Clear();
+  _impl_.instructions_.Clear();
 }
-inline std::string* Recipe::add_job_steps() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline std::string* Recipe::add_instructions() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  std::string* _s = _internal_mutable_job_steps()->Add();
-  // @@protoc_insertion_point(field_add_mutable:recipe.Recipe.job_steps)
+  std::string* _s = _internal_mutable_instructions()->Add();
+  // @@protoc_insertion_point(field_add_mutable:recipe.Recipe.instructions)
   return _s;
 }
-inline const std::string& Recipe::job_steps(int index) const
+inline const std::string& Recipe::instructions(int index) const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:recipe.Recipe.job_steps)
-  return _internal_job_steps().Get(index);
+  // @@protoc_insertion_point(field_get:recipe.Recipe.instructions)
+  return _internal_instructions().Get(index);
 }
-inline std::string* Recipe::mutable_job_steps(int index)
+inline std::string* Recipe::mutable_instructions(int index)
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_mutable:recipe.Recipe.job_steps)
-  return _internal_mutable_job_steps()->Mutable(index);
+  // @@protoc_insertion_point(field_mutable:recipe.Recipe.instructions)
+  return _internal_mutable_instructions()->Mutable(index);
 }
 template <typename Arg_, typename... Args_>
-inline void Recipe::set_job_steps(int index, Arg_&& value, Args_... args) {
+inline void Recipe::set_instructions(int index, Arg_&& value, Args_... args) {
   ::google::protobuf::internal::AssignToString(
-      *_internal_mutable_job_steps()->Mutable(index),
+      *_internal_mutable_instructions()->Mutable(index),
       std::forward<Arg_>(value), args... );
-  // @@protoc_insertion_point(field_set:recipe.Recipe.job_steps)
+  // @@protoc_insertion_point(field_set:recipe.Recipe.instructions)
 }
 template <typename Arg_, typename... Args_>
-inline void Recipe::add_job_steps(Arg_&& value, Args_... args) {
+inline void Recipe::add_instructions(Arg_&& value, Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  ::google::protobuf::internal::AddToRepeatedPtrField(*_internal_mutable_job_steps(),
+  ::google::protobuf::internal::AddToRepeatedPtrField(*_internal_mutable_instructions(),
                                std::forward<Arg_>(value),
                                args... );
-  // @@protoc_insertion_point(field_add:recipe.Recipe.job_steps)
+  // @@protoc_insertion_point(field_add:recipe.Recipe.instructions)
 }
 inline const ::google::protobuf::RepeatedPtrField<std::string>&
-Recipe::job_steps() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_list:recipe.Recipe.job_steps)
-  return _internal_job_steps();
+Recipe::instructions() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_list:recipe.Recipe.instructions)
+  return _internal_instructions();
 }
 inline ::google::protobuf::RepeatedPtrField<std::string>*
-Recipe::mutable_job_steps() ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_mutable_list:recipe.Recipe.job_steps)
+Recipe::mutable_instructions() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_mutable_list:recipe.Recipe.instructions)
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  return _internal_mutable_job_steps();
+  return _internal_mutable_instructions();
 }
 inline const ::google::protobuf::RepeatedPtrField<std::string>&
-Recipe::_internal_job_steps() const {
+Recipe::_internal_instructions() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
-  return _impl_.job_steps_;
+  return _impl_.instructions_;
 }
 inline ::google::protobuf::RepeatedPtrField<std::string>*
-Recipe::_internal_mutable_job_steps() {
+Recipe::_internal_mutable_instructions() {
   ::google::protobuf::internal::TSanRead(&_impl_);
-  return &_impl_.job_steps_;
+  return &_impl_.instructions_;
 }
 
 #ifdef __GNUC__

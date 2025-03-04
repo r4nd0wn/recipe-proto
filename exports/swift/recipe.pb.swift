@@ -49,7 +49,7 @@ struct Recipe_Recipe: Sendable {
 
   var ingrediences: [Recipe_Ingredience] = []
 
-  var jobSteps: [String] = []
+  var instructions: [String] = []
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -111,7 +111,7 @@ extension Recipe_Recipe: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementa
     2: .standard(proto: "active_time"),
     3: .standard(proto: "passive_time"),
     4: .same(proto: "ingrediences"),
-    5: .standard(proto: "job_steps"),
+    5: .same(proto: "instructions"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -124,7 +124,7 @@ extension Recipe_Recipe: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementa
       case 2: try { try decoder.decodeSingularUInt32Field(value: &self.activeTime) }()
       case 3: try { try decoder.decodeSingularUInt32Field(value: &self.passiveTime) }()
       case 4: try { try decoder.decodeRepeatedMessageField(value: &self.ingrediences) }()
-      case 5: try { try decoder.decodeRepeatedStringField(value: &self.jobSteps) }()
+      case 5: try { try decoder.decodeRepeatedStringField(value: &self.instructions) }()
       default: break
       }
     }
@@ -143,8 +143,8 @@ extension Recipe_Recipe: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementa
     if !self.ingrediences.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.ingrediences, fieldNumber: 4)
     }
-    if !self.jobSteps.isEmpty {
-      try visitor.visitRepeatedStringField(value: self.jobSteps, fieldNumber: 5)
+    if !self.instructions.isEmpty {
+      try visitor.visitRepeatedStringField(value: self.instructions, fieldNumber: 5)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
@@ -154,7 +154,7 @@ extension Recipe_Recipe: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementa
     if lhs.activeTime != rhs.activeTime {return false}
     if lhs.passiveTime != rhs.passiveTime {return false}
     if lhs.ingrediences != rhs.ingrediences {return false}
-    if lhs.jobSteps != rhs.jobSteps {return false}
+    if lhs.instructions != rhs.instructions {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

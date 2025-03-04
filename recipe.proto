@@ -14,5 +14,5 @@ message Recipe {
     uint32 active_time = 2;
     uint32 passive_time = 3;
     repeated Ingredience ingrediences = 4;
-    repeated string job_steps = 5;
+    repeated string instructions = 5;
 }

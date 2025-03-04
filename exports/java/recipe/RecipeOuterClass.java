@@ -804,29 +804,29 @@ public final class RecipeOuterClass {
         int index);
 
     /**
-     * <code>repeated string job_steps = 5;</code>
-     * @return A list containing the jobSteps.
+     * <code>repeated string instructions = 5;</code>
+     * @return A list containing the instructions.
      */
     java.util.List<java.lang.String>
-        getJobStepsList();
+        getInstructionsList();
     /**
-     * <code>repeated string job_steps = 5;</code>
-     * @return The count of jobSteps.
+     * <code>repeated string instructions = 5;</code>
+     * @return The count of instructions.
      */
-    int getJobStepsCount();
+    int getInstructionsCount();
     /**
-     * <code>repeated string job_steps = 5;</code>
+     * <code>repeated string instructions = 5;</code>
      * @param index The index of the element to return.
-     * @return The jobSteps at the given index.
+     * @return The instructions at the given index.
      */
-    java.lang.String getJobSteps(int index);
+    java.lang.String getInstructions(int index);
     /**
-     * <code>repeated string job_steps = 5;</code>
+     * <code>repeated string instructions = 5;</code>
      * @param index The index of the value to return.
-     * @return The bytes of the jobSteps at the given index.
+     * @return The bytes of the instructions at the given index.
      */
     com.google.protobuf.ByteString
-        getJobStepsBytes(int index);
+        getInstructionsBytes(int index);
   }
   /**
    * Protobuf type {@code recipe.Recipe}
@@ -851,7 +851,7 @@ public final class RecipeOuterClass {
     }
     private Recipe() {
       ingrediences_ = java.util.Collections.emptyList();
-      jobSteps_ =
+      instructions_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
     }
 
@@ -942,41 +942,41 @@ public final class RecipeOuterClass {
       return ingrediences_.get(index);
     }
 
-    public static final int JOB_STEPS_FIELD_NUMBER = 5;
+    public static final int INSTRUCTIONS_FIELD_NUMBER = 5;
     @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringArrayList jobSteps_ =
+    private com.google.protobuf.LazyStringArrayList instructions_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
     /**
-     * <code>repeated string job_steps = 5;</code>
-     * @return A list containing the jobSteps.
+     * <code>repeated string instructions = 5;</code>
+     * @return A list containing the instructions.
      */
     public com.google.protobuf.ProtocolStringList
-        getJobStepsList() {
-      return jobSteps_;
+        getInstructionsList() {
+      return instructions_;
     }
     /**
-     * <code>repeated string job_steps = 5;</code>
-     * @return The count of jobSteps.
+     * <code>repeated string instructions = 5;</code>
+     * @return The count of instructions.
      */
-    public int getJobStepsCount() {
-      return jobSteps_.size();
+    public int getInstructionsCount() {
+      return instructions_.size();
     }
     /**
-     * <code>repeated string job_steps = 5;</code>
+     * <code>repeated string instructions = 5;</code>
      * @param index The index of the element to return.
-     * @return The jobSteps at the given index.
+     * @return The instructions at the given index.
      */
-    public java.lang.String getJobSteps(int index) {
-      return jobSteps_.get(index);
+    public java.lang.String getInstructions(int index) {
+      return instructions_.get(index);
     }
     /**
-     * <code>repeated string job_steps = 5;</code>
+     * <code>repeated string instructions = 5;</code>
      * @param index The index of the value to return.
-     * @return The bytes of the jobSteps at the given index.
+     * @return The bytes of the instructions at the given index.
      */
     public com.google.protobuf.ByteString
-        getJobStepsBytes(int index) {
-      return jobSteps_.getByteString(index);
+        getInstructionsBytes(int index) {
+      return instructions_.getByteString(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1005,8 +1005,8 @@ public final class RecipeOuterClass {
       for (int i = 0; i < ingrediences_.size(); i++) {
         output.writeMessage(4, ingrediences_.get(i));
       }
-      for (int i = 0; i < jobSteps_.size(); i++) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 5, jobSteps_.getRaw(i));
+      for (int i = 0; i < instructions_.size(); i++) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 5, instructions_.getRaw(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -1035,11 +1035,11 @@ public final class RecipeOuterClass {
       }
       {
         int dataSize = 0;
-        for (int i = 0; i < jobSteps_.size(); i++) {
-          dataSize += computeStringSizeNoTag(jobSteps_.getRaw(i));
+        for (int i = 0; i < instructions_.size(); i++) {
+          dataSize += computeStringSizeNoTag(instructions_.getRaw(i));
         }
         size += dataSize;
-        size += 1 * getJobStepsList().size();
+        size += 1 * getInstructionsList().size();
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -1064,8 +1064,8 @@ public final class RecipeOuterClass {
           != other.getPassiveTime()) return false;
       if (!getIngrediencesList()
           .equals(other.getIngrediencesList())) return false;
-      if (!getJobStepsList()
-          .equals(other.getJobStepsList())) return false;
+      if (!getInstructionsList()
+          .equals(other.getInstructionsList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -1087,9 +1087,9 @@ public final class RecipeOuterClass {
         hash = (37 * hash) + INGREDIENCES_FIELD_NUMBER;
         hash = (53 * hash) + getIngrediencesList().hashCode();
       }
-      if (getJobStepsCount() > 0) {
-        hash = (37 * hash) + JOB_STEPS_FIELD_NUMBER;
-        hash = (53 * hash) + getJobStepsList().hashCode();
+      if (getInstructionsCount() > 0) {
+        hash = (37 * hash) + INSTRUCTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getInstructionsList().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -1232,7 +1232,7 @@ public final class RecipeOuterClass {
           ingrediencesBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000008);
-        jobSteps_ =
+        instructions_ =
             com.google.protobuf.LazyStringArrayList.emptyList();
         return this;
       }
@@ -1290,8 +1290,8 @@ public final class RecipeOuterClass {
           result.passiveTime_ = passiveTime_;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
-          jobSteps_.makeImmutable();
-          result.jobSteps_ = jobSteps_;
+          instructions_.makeImmutable();
+          result.instructions_ = instructions_;
         }
       }
 
@@ -1342,13 +1342,13 @@ public final class RecipeOuterClass {
             }
           }
         }
-        if (!other.jobSteps_.isEmpty()) {
-          if (jobSteps_.isEmpty()) {
-            jobSteps_ = other.jobSteps_;
+        if (!other.instructions_.isEmpty()) {
+          if (instructions_.isEmpty()) {
+            instructions_ = other.instructions_;
             bitField0_ |= 0x00000010;
           } else {
-            ensureJobStepsIsMutable();
-            jobSteps_.addAll(other.jobSteps_);
+            ensureInstructionsIsMutable();
+            instructions_.addAll(other.instructions_);
           }
           onChanged();
         }
@@ -1408,8 +1408,8 @@ public final class RecipeOuterClass {
               } // case 34
               case 42: {
                 java.lang.String s = input.readStringRequireUtf8();
-                ensureJobStepsIsMutable();
-                jobSteps_.add(s);
+                ensureInstructionsIsMutable();
+                instructions_.add(s);
                 break;
               } // case 42
               default: {
@@ -1765,112 +1765,112 @@ public final class RecipeOuterClass {
         return ingrediencesBuilder_;
       }
 
-      private com.google.protobuf.LazyStringArrayList jobSteps_ =
+      private com.google.protobuf.LazyStringArrayList instructions_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
-      private void ensureJobStepsIsMutable() {
-        if (!jobSteps_.isModifiable()) {
-          jobSteps_ = new com.google.protobuf.LazyStringArrayList(jobSteps_);
+      private void ensureInstructionsIsMutable() {
+        if (!instructions_.isModifiable()) {
+          instructions_ = new com.google.protobuf.LazyStringArrayList(instructions_);
         }
         bitField0_ |= 0x00000010;
       }
       /**
-       * <code>repeated string job_steps = 5;</code>
-       * @return A list containing the jobSteps.
+       * <code>repeated string instructions = 5;</code>
+       * @return A list containing the instructions.
        */
       public com.google.protobuf.ProtocolStringList
-          getJobStepsList() {
-        jobSteps_.makeImmutable();
-        return jobSteps_;
+          getInstructionsList() {
+        instructions_.makeImmutable();
+        return instructions_;
       }
       /**
-       * <code>repeated string job_steps = 5;</code>
-       * @return The count of jobSteps.
+       * <code>repeated string instructions = 5;</code>
+       * @return The count of instructions.
        */
-      public int getJobStepsCount() {
-        return jobSteps_.size();
+      public int getInstructionsCount() {
+        return instructions_.size();
       }
       /**
-       * <code>repeated string job_steps = 5;</code>
+       * <code>repeated string instructions = 5;</code>
        * @param index The index of the element to return.
-       * @return The jobSteps at the given index.
+       * @return The instructions at the given index.
        */
-      public java.lang.String getJobSteps(int index) {
-        return jobSteps_.get(index);
+      public java.lang.String getInstructions(int index) {
+        return instructions_.get(index);
       }
       /**
-       * <code>repeated string job_steps = 5;</code>
+       * <code>repeated string instructions = 5;</code>
        * @param index The index of the value to return.
-       * @return The bytes of the jobSteps at the given index.
+       * @return The bytes of the instructions at the given index.
        */
       public com.google.protobuf.ByteString
-          getJobStepsBytes(int index) {
-        return jobSteps_.getByteString(index);
+          getInstructionsBytes(int index) {
+        return instructions_.getByteString(index);
       }
       /**
-       * <code>repeated string job_steps = 5;</code>
+       * <code>repeated string instructions = 5;</code>
        * @param index The index to set the value at.
-       * @param value The jobSteps to set.
+       * @param value The instructions to set.
        * @return This builder for chaining.
        */
-      public Builder setJobSteps(
+      public Builder setInstructions(
           int index, java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
-        ensureJobStepsIsMutable();
-        jobSteps_.set(index, value);
+        ensureInstructionsIsMutable();
+        instructions_.set(index, value);
         bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string job_steps = 5;</code>
-       * @param value The jobSteps to add.
+       * <code>repeated string instructions = 5;</code>
+       * @param value The instructions to add.
        * @return This builder for chaining.
        */
-      public Builder addJobSteps(
+      public Builder addInstructions(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
-        ensureJobStepsIsMutable();
-        jobSteps_.add(value);
+        ensureInstructionsIsMutable();
+        instructions_.add(value);
         bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string job_steps = 5;</code>
-       * @param values The jobSteps to add.
+       * <code>repeated string instructions = 5;</code>
+       * @param values The instructions to add.
        * @return This builder for chaining.
        */
-      public Builder addAllJobSteps(
+      public Builder addAllInstructions(
           java.lang.Iterable<java.lang.String> values) {
-        ensureJobStepsIsMutable();
+        ensureInstructionsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, jobSteps_);
+            values, instructions_);
         bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string job_steps = 5;</code>
+       * <code>repeated string instructions = 5;</code>
        * @return This builder for chaining.
        */
-      public Builder clearJobSteps() {
-        jobSteps_ =
+      public Builder clearInstructions() {
+        instructions_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
         bitField0_ = (bitField0_ & ~0x00000010);;
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string job_steps = 5;</code>
-       * @param value The bytes of the jobSteps to add.
+       * <code>repeated string instructions = 5;</code>
+       * @param value The bytes of the instructions to add.
        * @return This builder for chaining.
        */
-      public Builder addJobStepsBytes(
+      public Builder addInstructionsBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
-        ensureJobStepsIsMutable();
-        jobSteps_.add(value);
+        ensureInstructionsIsMutable();
+        instructions_.add(value);
         bitField0_ |= 0x00000010;
         onChanged();
         return this;
@@ -1948,10 +1948,10 @@ public final class RecipeOuterClass {
     java.lang.String[] descriptorData = {
       "\n\014recipe.proto\022\006recipe\"9\n\013Ingredience\022\016\n" +
       "\006amount\030\001 \001(\002\022\014\n\004name\030\002 \001(\t\022\014\n\004unit\030\003 \001(" +
-      "\t\"\203\001\n\006Recipe\022\020\n\010portions\030\001 \001(\r\022\023\n\013active" +
+      "\t\"\206\001\n\006Recipe\022\020\n\010portions\030\001 \001(\r\022\023\n\013active" +
       "_time\030\002 \001(\r\022\024\n\014passive_time\030\003 \001(\r\022)\n\014ing" +
-      "rediences\030\004 \003(\0132\023.recipe.Ingredience\022\021\n\t" +
-      "job_steps\030\005 \003(\tb\006proto3"
+      "rediences\030\004 \003(\0132\023.recipe.Ingredience\022\024\n\014" +
+      "instructions\030\005 \003(\tb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1968,7 +1968,7 @@ public final class RecipeOuterClass {
     internal_static_recipe_Recipe_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_recipe_Recipe_descriptor,
-        new java.lang.String[] { "Portions", "ActiveTime", "PassiveTime", "Ingrediences", "JobSteps", });
+        new java.lang.String[] { "Portions", "ActiveTime", "PassiveTime", "Ingrediences", "Instructions", });
     descriptor.resolveAllFeaturesImmutable();
   }
 

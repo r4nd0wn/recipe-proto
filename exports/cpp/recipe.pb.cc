@@ -60,7 +60,7 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
 inline constexpr Recipe::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
       : ingrediences_{},
-        job_steps_{},
+        instructions_{},
         portions_{0u},
         active_time_{0u},
         passive_time_{0u},
@@ -116,7 +116,7 @@ const ::uint32_t
         PROTOBUF_FIELD_OFFSET(::recipe::Recipe, _impl_.active_time_),
         PROTOBUF_FIELD_OFFSET(::recipe::Recipe, _impl_.passive_time_),
         PROTOBUF_FIELD_OFFSET(::recipe::Recipe, _impl_.ingrediences_),
-        PROTOBUF_FIELD_OFFSET(::recipe::Recipe, _impl_.job_steps_),
+        PROTOBUF_FIELD_OFFSET(::recipe::Recipe, _impl_.instructions_),
 };
 
 static const ::_pbi::MigrationSchema
@@ -132,16 +132,16 @@ const char descriptor_table_protodef_recipe_2eproto[] ABSL_ATTRIBUTE_SECTION_VAR
     protodesc_cold) = {
     "\n\014recipe.proto\022\006recipe\"9\n\013Ingredience\022\016\n"
     "\006amount\030\001 \001(\002\022\014\n\004name\030\002 \001(\t\022\014\n\004unit\030\003 \001("
-    "\t\"\203\001\n\006Recipe\022\020\n\010portions\030\001 \001(\r\022\023\n\013active"
+    "\t\"\206\001\n\006Recipe\022\020\n\010portions\030\001 \001(\r\022\023\n\013active"
     "_time\030\002 \001(\r\022\024\n\014passive_time\030\003 \001(\r\022)\n\014ing"
-    "rediences\030\004 \003(\0132\023.recipe.Ingredience\022\021\n\t"
-    "job_steps\030\005 \003(\tb\006proto3"
+    "rediences\030\004 \003(\0132\023.recipe.Ingredience\022\024\n\014"
+    "instructions\030\005 \003(\tb\006proto3"
 };
 static ::absl::once_flag descriptor_table_recipe_2eproto_once;
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_recipe_2eproto = {
     false,
     false,
-    223,
+    226,
     descriptor_table_protodef_recipe_2eproto,
     "recipe.proto",
     &descriptor_table_recipe_2eproto_once,
@@ -459,7 +459,7 @@ inline PROTOBUF_NDEBUG_INLINE Recipe::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
     const Impl_& from, const ::recipe::Recipe& from_msg)
       : ingrediences_{visibility, arena, from.ingrediences_},
-        job_steps_{visibility, arena, from.job_steps_},
+        instructions_{visibility, arena, from.instructions_},
         _cached_size_{0} {}
 
 Recipe::Recipe(
@@ -489,7 +489,7 @@ inline PROTOBUF_NDEBUG_INLINE Recipe::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
       : ingrediences_{visibility, arena},
-        job_steps_{visibility, arena},
+        instructions_{visibility, arena},
         _cached_size_{0} {}
 
 inline void Recipe::SharedCtor(::_pb::Arena* arena) {
@@ -522,8 +522,8 @@ constexpr auto Recipe::InternalNewImpl_() {
           decltype(Recipe::_impl_.ingrediences_)::
               InternalGetArenaOffset(
                   ::google::protobuf::Message::internal_visibility()),
-      PROTOBUF_FIELD_OFFSET(Recipe, _impl_.job_steps_) +
-          decltype(Recipe::_impl_.job_steps_)::
+      PROTOBUF_FIELD_OFFSET(Recipe, _impl_.instructions_) +
+          decltype(Recipe::_impl_.instructions_)::
               InternalGetArenaOffset(
                   ::google::protobuf::Message::internal_visibility()),
   });
@@ -564,7 +564,7 @@ const ::google::protobuf::internal::ClassData* Recipe::GetClassData() const {
   return _class_data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<3, 5, 1, 31, 2> Recipe::_table_ = {
+const ::_pbi::TcParseTable<3, 5, 1, 34, 2> Recipe::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
@@ -595,9 +595,9 @@ const ::_pbi::TcParseTable<3, 5, 1, 31, 2> Recipe::_table_ = {
     // repeated .recipe.Ingredience ingrediences = 4;
     {::_pbi::TcParser::FastMtR1,
      {34, 63, 0, PROTOBUF_FIELD_OFFSET(Recipe, _impl_.ingrediences_)}},
-    // repeated string job_steps = 5;
+    // repeated string instructions = 5;
     {::_pbi::TcParser::FastUR1,
-     {42, 63, 0, PROTOBUF_FIELD_OFFSET(Recipe, _impl_.job_steps_)}},
+     {42, 63, 0, PROTOBUF_FIELD_OFFSET(Recipe, _impl_.instructions_)}},
     {::_pbi::TcParser::MiniParse, {}},
     {::_pbi::TcParser::MiniParse, {}},
   }}, {{
@@ -615,15 +615,15 @@ const ::_pbi::TcParseTable<3, 5, 1, 31, 2> Recipe::_table_ = {
     // repeated .recipe.Ingredience ingrediences = 4;
     {PROTOBUF_FIELD_OFFSET(Recipe, _impl_.ingrediences_), 0, 0,
     (0 | ::_fl::kFcRepeated | ::_fl::kMessage | ::_fl::kTvTable)},
-    // repeated string job_steps = 5;
-    {PROTOBUF_FIELD_OFFSET(Recipe, _impl_.job_steps_), 0, 0,
+    // repeated string instructions = 5;
+    {PROTOBUF_FIELD_OFFSET(Recipe, _impl_.instructions_), 0, 0,
     (0 | ::_fl::kFcRepeated | ::_fl::kUtf8String | ::_fl::kRepSString)},
   }}, {{
     {::_pbi::TcParser::GetTable<::recipe::Ingredience>()},
   }}, {{
-    "\15\0\0\0\0\11\0\0"
+    "\15\0\0\0\0\14\0\0"
     "recipe.Recipe"
-    "job_steps"
+    "instructions"
   }},
 };
 
@@ -635,7 +635,7 @@ PROTOBUF_NOINLINE void Recipe::Clear() {
   (void) cached_has_bits;
 
   _impl_.ingrediences_.Clear();
-  _impl_.job_steps_.Clear();
+  _impl_.instructions_.Clear();
   ::memset(&_impl_.portions_, 0, static_cast<::size_t>(
       reinterpret_cast<char*>(&_impl_.passive_time_) -
       reinterpret_cast<char*>(&_impl_.portions_)) + sizeof(_impl_.passive_time_));
@@ -689,11 +689,11 @@ PROTOBUF_NOINLINE void Recipe::Clear() {
                     target, stream);
           }
 
-          // repeated string job_steps = 5;
-          for (int i = 0, n = this_._internal_job_steps_size(); i < n; ++i) {
-            const auto& s = this_._internal_job_steps().Get(i);
+          // repeated string instructions = 5;
+          for (int i = 0, n = this_._internal_instructions_size(); i < n; ++i) {
+            const auto& s = this_._internal_instructions().Get(i);
             ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-                s.data(), static_cast<int>(s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "recipe.Recipe.job_steps");
+                s.data(), static_cast<int>(s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "recipe.Recipe.instructions");
             target = stream->WriteString(5, s, target);
           }
 
@@ -729,13 +729,13 @@ PROTOBUF_NOINLINE void Recipe::Clear() {
                 total_size += ::google::protobuf::internal::WireFormatLite::MessageSize(msg);
               }
             }
-            // repeated string job_steps = 5;
+            // repeated string instructions = 5;
             {
               total_size +=
-                  1 * ::google::protobuf::internal::FromIntSize(this_._internal_job_steps().size());
-              for (int i = 0, n = this_._internal_job_steps().size(); i < n; ++i) {
+                  1 * ::google::protobuf::internal::FromIntSize(this_._internal_instructions().size());
+              for (int i = 0, n = this_._internal_instructions().size(); i < n; ++i) {
                 total_size += ::google::protobuf::internal::WireFormatLite::StringSize(
-                    this_._internal_job_steps().Get(i));
+                    this_._internal_instructions().Get(i));
               }
             }
           }
@@ -770,7 +770,7 @@ void Recipe::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::
 
   _this->_internal_mutable_ingrediences()->MergeFrom(
       from._internal_ingrediences());
-  _this->_internal_mutable_job_steps()->MergeFrom(from._internal_job_steps());
+  _this->_internal_mutable_instructions()->MergeFrom(from._internal_instructions());
   if (from._internal_portions() != 0) {
     _this->_impl_.portions_ = from._impl_.portions_;
   }
@@ -795,7 +795,7 @@ void Recipe::InternalSwap(Recipe* PROTOBUF_RESTRICT other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   _impl_.ingrediences_.InternalSwap(&other->_impl_.ingrediences_);
-  _impl_.job_steps_.InternalSwap(&other->_impl_.job_steps_);
+  _impl_.instructions_.InternalSwap(&other->_impl_.instructions_);
   ::google::protobuf::internal::memswap<
       PROTOBUF_FIELD_OFFSET(Recipe, _impl_.passive_time_)
       + sizeof(Recipe::_impl_.passive_time_)
