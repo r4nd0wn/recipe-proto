@@ -24,15 +24,15 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0crecipe.proto\x12\x06recipe\"9\n\x0bIngredience\x12\x0e\n\x06\x61mount\x18\x01 \x01(\x02\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0c\n\x04unit\x18\x03 \x01(\t\"\x86\x01\n\x06Recipe\x12\x10\n\x08portions\x18\x01 \x01(\r\x12\x13\n\x0b\x61\x63tive_time\x18\x02 \x01(\r\x12\x14\n\x0cpassive_time\x18\x03 \x01(\r\x12)\n\x0cingrediences\x18\x04 \x03(\x0b\x32\x13.recipe.Ingredience\x12\x14\n\x0cinstructions\x18\x05 \x03(\tb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0crecipe.proto\x12\x06recipe\"8\n\nIngredient\x12\x0e\n\x06\x61mount\x18\x01 \x01(\x02\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0c\n\x04unit\x18\x03 \x01(\t\"\x84\x01\n\x06Recipe\x12\x10\n\x08portions\x18\x01 \x01(\r\x12\x13\n\x0b\x61\x63tive_time\x18\x02 \x01(\r\x12\x14\n\x0cpassive_time\x18\x03 \x01(\r\x12\'\n\x0bingredients\x18\x04 \x03(\x0b\x32\x12.recipe.Ingredient\x12\x14\n\x0cinstructions\x18\x05 \x03(\tb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'recipe_pb2', _globals)
 if not _descriptor._USE_C_DESCRIPTORS:
   DESCRIPTOR._loaded_options = None
-  _globals['_INGREDIENCE']._serialized_start=24
-  _globals['_INGREDIENCE']._serialized_end=81
-  _globals['_RECIPE']._serialized_start=84
-  _globals['_RECIPE']._serialized_end=218
+  _globals['_INGREDIENT']._serialized_start=24
+  _globals['_INGREDIENT']._serialized_end=80
+  _globals['_RECIPE']._serialized_start=83
+  _globals['_RECIPE']._serialized_end=215
 # @@protoc_insertion_point(module_scope)

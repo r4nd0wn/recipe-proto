@@ -26,7 +26,7 @@ namespace _pbi = ::google::protobuf::internal;
 namespace _fl = ::google::protobuf::internal::field_layout;
 namespace recipe {
 
-inline constexpr Ingredience::Impl_::Impl_(
+inline constexpr Ingredient::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
       : name_(
             &::google::protobuf::internal::fixed_address_empty_string,
@@ -38,7 +38,7 @@ inline constexpr Ingredience::Impl_::Impl_(
         _cached_size_{0} {}
 
 template <typename>
-PROTOBUF_CONSTEXPR Ingredience::Ingredience(::_pbi::ConstantInitialized)
+PROTOBUF_CONSTEXPR Ingredient::Ingredient(::_pbi::ConstantInitialized)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(_class_data_.base()),
 #else   // PROTOBUF_CUSTOM_VTABLE
@@ -46,20 +46,20 @@ PROTOBUF_CONSTEXPR Ingredience::Ingredience(::_pbi::ConstantInitialized)
 #endif  // PROTOBUF_CUSTOM_VTABLE
       _impl_(::_pbi::ConstantInitialized()) {
 }
-struct IngredienceDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR IngredienceDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~IngredienceDefaultTypeInternal() {}
+struct IngredientDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR IngredientDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~IngredientDefaultTypeInternal() {}
   union {
-    Ingredience _instance;
+    Ingredient _instance;
   };
 };
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 IngredienceDefaultTypeInternal _Ingredience_default_instance_;
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 IngredientDefaultTypeInternal _Ingredient_default_instance_;
 
 inline constexpr Recipe::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
-      : ingrediences_{},
+      : ingredients_{},
         instructions_{},
         portions_{0u},
         active_time_{0u},
@@ -94,16 +94,16 @@ const ::uint32_t
     TableStruct_recipe_2eproto::offsets[] ABSL_ATTRIBUTE_SECTION_VARIABLE(
         protodesc_cold) = {
         ~0u,  // no _has_bits_
-        PROTOBUF_FIELD_OFFSET(::recipe::Ingredience, _internal_metadata_),
+        PROTOBUF_FIELD_OFFSET(::recipe::Ingredient, _internal_metadata_),
         ~0u,  // no _extensions_
         ~0u,  // no _oneof_case_
         ~0u,  // no _weak_field_map_
         ~0u,  // no _inlined_string_donated_
         ~0u,  // no _split_
         ~0u,  // no sizeof(Split)
-        PROTOBUF_FIELD_OFFSET(::recipe::Ingredience, _impl_.amount_),
-        PROTOBUF_FIELD_OFFSET(::recipe::Ingredience, _impl_.name_),
-        PROTOBUF_FIELD_OFFSET(::recipe::Ingredience, _impl_.unit_),
+        PROTOBUF_FIELD_OFFSET(::recipe::Ingredient, _impl_.amount_),
+        PROTOBUF_FIELD_OFFSET(::recipe::Ingredient, _impl_.name_),
+        PROTOBUF_FIELD_OFFSET(::recipe::Ingredient, _impl_.unit_),
         ~0u,  // no _has_bits_
         PROTOBUF_FIELD_OFFSET(::recipe::Recipe, _internal_metadata_),
         ~0u,  // no _extensions_
@@ -115,33 +115,33 @@ const ::uint32_t
         PROTOBUF_FIELD_OFFSET(::recipe::Recipe, _impl_.portions_),
         PROTOBUF_FIELD_OFFSET(::recipe::Recipe, _impl_.active_time_),
         PROTOBUF_FIELD_OFFSET(::recipe::Recipe, _impl_.passive_time_),
-        PROTOBUF_FIELD_OFFSET(::recipe::Recipe, _impl_.ingrediences_),
+        PROTOBUF_FIELD_OFFSET(::recipe::Recipe, _impl_.ingredients_),
         PROTOBUF_FIELD_OFFSET(::recipe::Recipe, _impl_.instructions_),
 };
 
 static const ::_pbi::MigrationSchema
     schemas[] ABSL_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-        {0, -1, -1, sizeof(::recipe::Ingredience)},
+        {0, -1, -1, sizeof(::recipe::Ingredient)},
         {11, -1, -1, sizeof(::recipe::Recipe)},
 };
 static const ::_pb::Message* const file_default_instances[] = {
-    &::recipe::_Ingredience_default_instance_._instance,
+    &::recipe::_Ingredient_default_instance_._instance,
     &::recipe::_Recipe_default_instance_._instance,
 };
 const char descriptor_table_protodef_recipe_2eproto[] ABSL_ATTRIBUTE_SECTION_VARIABLE(
     protodesc_cold) = {
-    "\n\014recipe.proto\022\006recipe\"9\n\013Ingredience\022\016\n"
-    "\006amount\030\001 \001(\002\022\014\n\004name\030\002 \001(\t\022\014\n\004unit\030\003 \001("
-    "\t\"\206\001\n\006Recipe\022\020\n\010portions\030\001 \001(\r\022\023\n\013active"
-    "_time\030\002 \001(\r\022\024\n\014passive_time\030\003 \001(\r\022)\n\014ing"
-    "rediences\030\004 \003(\0132\023.recipe.Ingredience\022\024\n\014"
-    "instructions\030\005 \003(\tb\006proto3"
+    "\n\014recipe.proto\022\006recipe\"8\n\nIngredient\022\016\n\006"
+    "amount\030\001 \001(\002\022\014\n\004name\030\002 \001(\t\022\014\n\004unit\030\003 \001(\t"
+    "\"\204\001\n\006Recipe\022\020\n\010portions\030\001 \001(\r\022\023\n\013active_"
+    "time\030\002 \001(\r\022\024\n\014passive_time\030\003 \001(\r\022\'\n\013ingr"
+    "edients\030\004 \003(\0132\022.recipe.Ingredient\022\024\n\014ins"
+    "tructions\030\005 \003(\tb\006proto3"
 };
 static ::absl::once_flag descriptor_table_recipe_2eproto_once;
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_recipe_2eproto = {
     false,
     false,
-    226,
+    223,
     descriptor_table_protodef_recipe_2eproto,
     "recipe.proto",
     &descriptor_table_recipe_2eproto_once,
@@ -157,60 +157,60 @@ PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_recipe_2eproto
 namespace recipe {
 // ===================================================================
 
-class Ingredience::_Internal {
+class Ingredient::_Internal {
  public:
 };
 
-Ingredience::Ingredience(::google::protobuf::Arena* arena)
+Ingredient::Ingredient(::google::protobuf::Arena* arena)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(arena, _class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
   SharedCtor(arena);
-  // @@protoc_insertion_point(arena_constructor:recipe.Ingredience)
+  // @@protoc_insertion_point(arena_constructor:recipe.Ingredient)
 }
-inline PROTOBUF_NDEBUG_INLINE Ingredience::Impl_::Impl_(
+inline PROTOBUF_NDEBUG_INLINE Ingredient::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
-    const Impl_& from, const ::recipe::Ingredience& from_msg)
+    const Impl_& from, const ::recipe::Ingredient& from_msg)
       : name_(arena, from.name_),
         unit_(arena, from.unit_),
         _cached_size_{0} {}
 
-Ingredience::Ingredience(
+Ingredient::Ingredient(
     ::google::protobuf::Arena* arena,
-    const Ingredience& from)
+    const Ingredient& from)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(arena, _class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
-  Ingredience* const _this = this;
+  Ingredient* const _this = this;
   (void)_this;
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
   _impl_.amount_ = from._impl_.amount_;
 
-  // @@protoc_insertion_point(copy_constructor:recipe.Ingredience)
+  // @@protoc_insertion_point(copy_constructor:recipe.Ingredient)
 }
-inline PROTOBUF_NDEBUG_INLINE Ingredience::Impl_::Impl_(
+inline PROTOBUF_NDEBUG_INLINE Ingredient::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
       : name_(arena),
         unit_(arena),
         _cached_size_{0} {}
 
-inline void Ingredience::SharedCtor(::_pb::Arena* arena) {
+inline void Ingredient::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
   _impl_.amount_ = {};
 }
-Ingredience::~Ingredience() {
-  // @@protoc_insertion_point(destructor:recipe.Ingredience)
+Ingredient::~Ingredient() {
+  // @@protoc_insertion_point(destructor:recipe.Ingredient)
   SharedDtor(*this);
 }
-inline void Ingredience::SharedDtor(MessageLite& self) {
-  Ingredience& this_ = static_cast<Ingredience&>(self);
+inline void Ingredient::SharedDtor(MessageLite& self) {
+  Ingredient& this_ = static_cast<Ingredient&>(self);
   this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
   ABSL_DCHECK(this_.GetArena() == nullptr);
   this_._impl_.name_.Destroy();
@@ -218,43 +218,43 @@ inline void Ingredience::SharedDtor(MessageLite& self) {
   this_._impl_.~Impl_();
 }
 
-inline void* Ingredience::PlacementNew_(const void*, void* mem,
+inline void* Ingredient::PlacementNew_(const void*, void* mem,
                                         ::google::protobuf::Arena* arena) {
-  return ::new (mem) Ingredience(arena);
+  return ::new (mem) Ingredient(arena);
 }
-constexpr auto Ingredience::InternalNewImpl_() {
-  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(Ingredience),
-                                            alignof(Ingredience));
+constexpr auto Ingredient::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(Ingredient),
+                                            alignof(Ingredient));
 }
 PROTOBUF_CONSTINIT
 PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::google::protobuf::internal::ClassDataFull Ingredience::_class_data_ = {
+const ::google::protobuf::internal::ClassDataFull Ingredient::_class_data_ = {
     ::google::protobuf::internal::ClassData{
-        &_Ingredience_default_instance_._instance,
+        &_Ingredient_default_instance_._instance,
         &_table_.header,
         nullptr,  // OnDemandRegisterArenaDtor
         nullptr,  // IsInitialized
-        &Ingredience::MergeImpl,
-        ::google::protobuf::Message::GetNewImpl<Ingredience>(),
+        &Ingredient::MergeImpl,
+        ::google::protobuf::Message::GetNewImpl<Ingredient>(),
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        &Ingredience::SharedDtor,
-        ::google::protobuf::Message::GetClearImpl<Ingredience>(), &Ingredience::ByteSizeLong,
-            &Ingredience::_InternalSerialize,
+        &Ingredient::SharedDtor,
+        ::google::protobuf::Message::GetClearImpl<Ingredient>(), &Ingredient::ByteSizeLong,
+            &Ingredient::_InternalSerialize,
 #endif  // PROTOBUF_CUSTOM_VTABLE
-        PROTOBUF_FIELD_OFFSET(Ingredience, _impl_._cached_size_),
+        PROTOBUF_FIELD_OFFSET(Ingredient, _impl_._cached_size_),
         false,
     },
-    &Ingredience::kDescriptorMethods,
+    &Ingredient::kDescriptorMethods,
     &descriptor_table_recipe_2eproto,
     nullptr,  // tracker
 };
-const ::google::protobuf::internal::ClassData* Ingredience::GetClassData() const {
+const ::google::protobuf::internal::ClassData* Ingredient::GetClassData() const {
   ::google::protobuf::internal::PrefetchToLocalCache(&_class_data_);
   ::google::protobuf::internal::PrefetchToLocalCache(_class_data_.tc_table);
   return _class_data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<2, 3, 0, 35, 2> Ingredience::_table_ = {
+const ::_pbi::TcParseTable<2, 3, 0, 34, 2> Ingredient::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
@@ -269,43 +269,43 @@ const ::_pbi::TcParseTable<2, 3, 0, 35, 2> Ingredience::_table_ = {
     nullptr,  // post_loop_handler
     ::_pbi::TcParser::GenericFallback,  // fallback
     #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
-    ::_pbi::TcParser::GetTable<::recipe::Ingredience>(),  // to_prefetch
+    ::_pbi::TcParser::GetTable<::recipe::Ingredient>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
     {::_pbi::TcParser::MiniParse, {}},
     // float amount = 1;
     {::_pbi::TcParser::FastF32S1,
-     {13, 63, 0, PROTOBUF_FIELD_OFFSET(Ingredience, _impl_.amount_)}},
+     {13, 63, 0, PROTOBUF_FIELD_OFFSET(Ingredient, _impl_.amount_)}},
     // string name = 2;
     {::_pbi::TcParser::FastUS1,
-     {18, 63, 0, PROTOBUF_FIELD_OFFSET(Ingredience, _impl_.name_)}},
+     {18, 63, 0, PROTOBUF_FIELD_OFFSET(Ingredient, _impl_.name_)}},
     // string unit = 3;
     {::_pbi::TcParser::FastUS1,
-     {26, 63, 0, PROTOBUF_FIELD_OFFSET(Ingredience, _impl_.unit_)}},
+     {26, 63, 0, PROTOBUF_FIELD_OFFSET(Ingredient, _impl_.unit_)}},
   }}, {{
     65535, 65535
   }}, {{
     // float amount = 1;
-    {PROTOBUF_FIELD_OFFSET(Ingredience, _impl_.amount_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(Ingredient, _impl_.amount_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kFloat)},
     // string name = 2;
-    {PROTOBUF_FIELD_OFFSET(Ingredience, _impl_.name_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(Ingredient, _impl_.name_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // string unit = 3;
-    {PROTOBUF_FIELD_OFFSET(Ingredience, _impl_.unit_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(Ingredient, _impl_.unit_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
   }},
   // no aux_entries
   {{
-    "\22\0\4\4\0\0\0\0"
-    "recipe.Ingredience"
+    "\21\0\4\4\0\0\0\0"
+    "recipe.Ingredient"
     "name"
     "unit"
   }},
 };
 
-PROTOBUF_NOINLINE void Ingredience::Clear() {
-// @@protoc_insertion_point(message_clear_start:recipe.Ingredience)
+PROTOBUF_NOINLINE void Ingredient::Clear() {
+// @@protoc_insertion_point(message_clear_start:recipe.Ingredient)
   ::google::protobuf::internal::TSanWrite(&_impl_);
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -318,17 +318,17 @@ PROTOBUF_NOINLINE void Ingredience::Clear() {
 }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        ::uint8_t* Ingredience::_InternalSerialize(
+        ::uint8_t* Ingredient::_InternalSerialize(
             const MessageLite& base, ::uint8_t* target,
             ::google::protobuf::io::EpsCopyOutputStream* stream) {
-          const Ingredience& this_ = static_cast<const Ingredience&>(base);
+          const Ingredient& this_ = static_cast<const Ingredient&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-        ::uint8_t* Ingredience::_InternalSerialize(
+        ::uint8_t* Ingredient::_InternalSerialize(
             ::uint8_t* target,
             ::google::protobuf::io::EpsCopyOutputStream* stream) const {
-          const Ingredience& this_ = *this;
+          const Ingredient& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          // @@protoc_insertion_point(serialize_to_array_start:recipe.Ingredience)
+          // @@protoc_insertion_point(serialize_to_array_start:recipe.Ingredient)
           ::uint32_t cached_has_bits = 0;
           (void)cached_has_bits;
 
@@ -343,7 +343,7 @@ PROTOBUF_NOINLINE void Ingredience::Clear() {
           if (!this_._internal_name().empty()) {
             const std::string& _s = this_._internal_name();
             ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "recipe.Ingredience.name");
+                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "recipe.Ingredient.name");
             target = stream->WriteStringMaybeAliased(2, _s, target);
           }
 
@@ -351,7 +351,7 @@ PROTOBUF_NOINLINE void Ingredience::Clear() {
           if (!this_._internal_unit().empty()) {
             const std::string& _s = this_._internal_unit();
             ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "recipe.Ingredience.unit");
+                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "recipe.Ingredient.unit");
             target = stream->WriteStringMaybeAliased(3, _s, target);
           }
 
@@ -360,18 +360,18 @@ PROTOBUF_NOINLINE void Ingredience::Clear() {
                 ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
                     this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
           }
-          // @@protoc_insertion_point(serialize_to_array_end:recipe.Ingredience)
+          // @@protoc_insertion_point(serialize_to_array_end:recipe.Ingredient)
           return target;
         }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        ::size_t Ingredience::ByteSizeLong(const MessageLite& base) {
-          const Ingredience& this_ = static_cast<const Ingredience&>(base);
+        ::size_t Ingredient::ByteSizeLong(const MessageLite& base) {
+          const Ingredient& this_ = static_cast<const Ingredient&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-        ::size_t Ingredience::ByteSizeLong() const {
-          const Ingredience& this_ = *this;
+        ::size_t Ingredient::ByteSizeLong() const {
+          const Ingredient& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          // @@protoc_insertion_point(message_byte_size_start:recipe.Ingredience)
+          // @@protoc_insertion_point(message_byte_size_start:recipe.Ingredient)
           ::size_t total_size = 0;
 
           ::uint32_t cached_has_bits = 0;
@@ -399,10 +399,10 @@ PROTOBUF_NOINLINE void Ingredience::Clear() {
                                                      &this_._impl_._cached_size_);
         }
 
-void Ingredience::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
-  auto* const _this = static_cast<Ingredience*>(&to_msg);
-  auto& from = static_cast<const Ingredience&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:recipe.Ingredience)
+void Ingredient::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<Ingredient*>(&to_msg);
+  auto& from = static_cast<const Ingredient&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:recipe.Ingredient)
   ABSL_DCHECK_NE(&from, _this);
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -419,15 +419,15 @@ void Ingredience::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::goo
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void Ingredience::CopyFrom(const Ingredience& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:recipe.Ingredience)
+void Ingredient::CopyFrom(const Ingredient& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:recipe.Ingredient)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 
-void Ingredience::InternalSwap(Ingredience* PROTOBUF_RESTRICT other) {
+void Ingredient::InternalSwap(Ingredient* PROTOBUF_RESTRICT other) {
   using std::swap;
   auto* arena = GetArena();
   ABSL_DCHECK_EQ(arena, other->GetArena());
@@ -437,7 +437,7 @@ void Ingredience::InternalSwap(Ingredience* PROTOBUF_RESTRICT other) {
         swap(_impl_.amount_, other->_impl_.amount_);
 }
 
-::google::protobuf::Metadata Ingredience::GetMetadata() const {
+::google::protobuf::Metadata Ingredient::GetMetadata() const {
   return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
 }
 // ===================================================================
@@ -458,7 +458,7 @@ Recipe::Recipe(::google::protobuf::Arena* arena)
 inline PROTOBUF_NDEBUG_INLINE Recipe::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
     const Impl_& from, const ::recipe::Recipe& from_msg)
-      : ingrediences_{visibility, arena, from.ingrediences_},
+      : ingredients_{visibility, arena, from.ingredients_},
         instructions_{visibility, arena, from.instructions_},
         _cached_size_{0} {}
 
@@ -488,7 +488,7 @@ Recipe::Recipe(
 inline PROTOBUF_NDEBUG_INLINE Recipe::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
-      : ingrediences_{visibility, arena},
+      : ingredients_{visibility, arena},
         instructions_{visibility, arena},
         _cached_size_{0} {}
 
@@ -518,8 +518,8 @@ inline void* Recipe::PlacementNew_(const void*, void* mem,
 }
 constexpr auto Recipe::InternalNewImpl_() {
   constexpr auto arena_bits = ::google::protobuf::internal::EncodePlacementArenaOffsets({
-      PROTOBUF_FIELD_OFFSET(Recipe, _impl_.ingrediences_) +
-          decltype(Recipe::_impl_.ingrediences_)::
+      PROTOBUF_FIELD_OFFSET(Recipe, _impl_.ingredients_) +
+          decltype(Recipe::_impl_.ingredients_)::
               InternalGetArenaOffset(
                   ::google::protobuf::Message::internal_visibility()),
       PROTOBUF_FIELD_OFFSET(Recipe, _impl_.instructions_) +
@@ -592,9 +592,9 @@ const ::_pbi::TcParseTable<3, 5, 1, 34, 2> Recipe::_table_ = {
     // uint32 passive_time = 3;
     {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(Recipe, _impl_.passive_time_), 63>(),
      {24, 63, 0, PROTOBUF_FIELD_OFFSET(Recipe, _impl_.passive_time_)}},
-    // repeated .recipe.Ingredience ingrediences = 4;
+    // repeated .recipe.Ingredient ingredients = 4;
     {::_pbi::TcParser::FastMtR1,
-     {34, 63, 0, PROTOBUF_FIELD_OFFSET(Recipe, _impl_.ingrediences_)}},
+     {34, 63, 0, PROTOBUF_FIELD_OFFSET(Recipe, _impl_.ingredients_)}},
     // repeated string instructions = 5;
     {::_pbi::TcParser::FastUR1,
      {42, 63, 0, PROTOBUF_FIELD_OFFSET(Recipe, _impl_.instructions_)}},
@@ -612,14 +612,14 @@ const ::_pbi::TcParseTable<3, 5, 1, 34, 2> Recipe::_table_ = {
     // uint32 passive_time = 3;
     {PROTOBUF_FIELD_OFFSET(Recipe, _impl_.passive_time_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUInt32)},
-    // repeated .recipe.Ingredience ingrediences = 4;
-    {PROTOBUF_FIELD_OFFSET(Recipe, _impl_.ingrediences_), 0, 0,
+    // repeated .recipe.Ingredient ingredients = 4;
+    {PROTOBUF_FIELD_OFFSET(Recipe, _impl_.ingredients_), 0, 0,
     (0 | ::_fl::kFcRepeated | ::_fl::kMessage | ::_fl::kTvTable)},
     // repeated string instructions = 5;
     {PROTOBUF_FIELD_OFFSET(Recipe, _impl_.instructions_), 0, 0,
     (0 | ::_fl::kFcRepeated | ::_fl::kUtf8String | ::_fl::kRepSString)},
   }}, {{
-    {::_pbi::TcParser::GetTable<::recipe::Ingredience>()},
+    {::_pbi::TcParser::GetTable<::recipe::Ingredient>()},
   }}, {{
     "\15\0\0\0\0\14\0\0"
     "recipe.Recipe"
@@ -634,7 +634,7 @@ PROTOBUF_NOINLINE void Recipe::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.ingrediences_.Clear();
+  _impl_.ingredients_.Clear();
   _impl_.instructions_.Clear();
   ::memset(&_impl_.portions_, 0, static_cast<::size_t>(
       reinterpret_cast<char*>(&_impl_.passive_time_) -
@@ -678,11 +678,11 @@ PROTOBUF_NOINLINE void Recipe::Clear() {
                 3, this_._internal_passive_time(), target);
           }
 
-          // repeated .recipe.Ingredience ingrediences = 4;
+          // repeated .recipe.Ingredient ingredients = 4;
           for (unsigned i = 0, n = static_cast<unsigned>(
-                                   this_._internal_ingrediences_size());
+                                   this_._internal_ingredients_size());
                i < n; i++) {
-            const auto& repfield = this_._internal_ingrediences().Get(i);
+            const auto& repfield = this_._internal_ingredients().Get(i);
             target =
                 ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
                     4, repfield, repfield.GetCachedSize(),
@@ -722,10 +722,10 @@ PROTOBUF_NOINLINE void Recipe::Clear() {
 
           ::_pbi::Prefetch5LinesFrom7Lines(&this_);
            {
-            // repeated .recipe.Ingredience ingrediences = 4;
+            // repeated .recipe.Ingredient ingredients = 4;
             {
-              total_size += 1UL * this_._internal_ingrediences_size();
-              for (const auto& msg : this_._internal_ingrediences()) {
+              total_size += 1UL * this_._internal_ingredients_size();
+              for (const auto& msg : this_._internal_ingredients()) {
                 total_size += ::google::protobuf::internal::WireFormatLite::MessageSize(msg);
               }
             }
@@ -768,8 +768,8 @@ void Recipe::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_internal_mutable_ingrediences()->MergeFrom(
-      from._internal_ingrediences());
+  _this->_internal_mutable_ingredients()->MergeFrom(
+      from._internal_ingredients());
   _this->_internal_mutable_instructions()->MergeFrom(from._internal_instructions());
   if (from._internal_portions() != 0) {
     _this->_impl_.portions_ = from._impl_.portions_;
@@ -794,7 +794,7 @@ void Recipe::CopyFrom(const Recipe& from) {
 void Recipe::InternalSwap(Recipe* PROTOBUF_RESTRICT other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.ingrediences_.InternalSwap(&other->_impl_.ingrediences_);
+  _impl_.ingredients_.InternalSwap(&other->_impl_.ingredients_);
   _impl_.instructions_.InternalSwap(&other->_impl_.instructions_);
   ::google::protobuf::internal::memswap<
       PROTOBUF_FIELD_OFFSET(Recipe, _impl_.passive_time_)

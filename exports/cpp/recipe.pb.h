@@ -52,9 +52,9 @@ struct TableStruct_recipe_2eproto {
 extern const ::google::protobuf::internal::DescriptorTable
     descriptor_table_recipe_2eproto;
 namespace recipe {
-class Ingredience;
-struct IngredienceDefaultTypeInternal;
-extern IngredienceDefaultTypeInternal _Ingredience_default_instance_;
+class Ingredient;
+struct IngredientDefaultTypeInternal;
+extern IngredientDefaultTypeInternal _Ingredient_default_instance_;
 class Recipe;
 struct RecipeDefaultTypeInternal;
 extern RecipeDefaultTypeInternal _Recipe_default_instance_;
@@ -71,31 +71,31 @@ namespace recipe {
 
 // -------------------------------------------------------------------
 
-class Ingredience final : public ::google::protobuf::Message
-/* @@protoc_insertion_point(class_definition:recipe.Ingredience) */ {
+class Ingredient final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:recipe.Ingredient) */ {
  public:
-  inline Ingredience() : Ingredience(nullptr) {}
-  ~Ingredience() PROTOBUF_FINAL;
+  inline Ingredient() : Ingredient(nullptr) {}
+  ~Ingredient() PROTOBUF_FINAL;
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-  void operator delete(Ingredience* msg, std::destroying_delete_t) {
+  void operator delete(Ingredient* msg, std::destroying_delete_t) {
     SharedDtor(*msg);
-    ::google::protobuf::internal::SizedDelete(msg, sizeof(Ingredience));
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(Ingredient));
   }
 #endif
 
   template <typename = void>
-  explicit PROTOBUF_CONSTEXPR Ingredience(
+  explicit PROTOBUF_CONSTEXPR Ingredient(
       ::google::protobuf::internal::ConstantInitialized);
 
-  inline Ingredience(const Ingredience& from) : Ingredience(nullptr, from) {}
-  inline Ingredience(Ingredience&& from) noexcept
-      : Ingredience(nullptr, std::move(from)) {}
-  inline Ingredience& operator=(const Ingredience& from) {
+  inline Ingredient(const Ingredient& from) : Ingredient(nullptr, from) {}
+  inline Ingredient(Ingredient&& from) noexcept
+      : Ingredient(nullptr, std::move(from)) {}
+  inline Ingredient& operator=(const Ingredient& from) {
     CopyFrom(from);
     return *this;
   }
-  inline Ingredience& operator=(Ingredience&& from) noexcept {
+  inline Ingredient& operator=(Ingredient&& from) noexcept {
     if (this == &from) return *this;
     if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
       InternalSwap(&from);
@@ -123,16 +123,16 @@ class Ingredience final : public ::google::protobuf::Message
   static const ::google::protobuf::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const Ingredience& default_instance() {
+  static const Ingredient& default_instance() {
     return *internal_default_instance();
   }
-  static inline const Ingredience* internal_default_instance() {
-    return reinterpret_cast<const Ingredience*>(
-        &_Ingredience_default_instance_);
+  static inline const Ingredient* internal_default_instance() {
+    return reinterpret_cast<const Ingredient*>(
+        &_Ingredient_default_instance_);
   }
   static constexpr int kIndexInFileMessages = 0;
-  friend void swap(Ingredience& a, Ingredience& b) { a.Swap(&b); }
-  inline void Swap(Ingredience* other) {
+  friend void swap(Ingredient& a, Ingredient& b) { a.Swap(&b); }
+  inline void Swap(Ingredient* other) {
     if (other == this) return;
     if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
       InternalSwap(other);
@@ -140,7 +140,7 @@ class Ingredience final : public ::google::protobuf::Message
       ::google::protobuf::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(Ingredience* other) {
+  void UnsafeArenaSwap(Ingredient* other) {
     if (other == this) return;
     ABSL_DCHECK(GetArena() == other->GetArena());
     InternalSwap(other);
@@ -148,13 +148,13 @@ class Ingredience final : public ::google::protobuf::Message
 
   // implements Message ----------------------------------------------
 
-  Ingredience* New(::google::protobuf::Arena* arena = nullptr) const {
-    return ::google::protobuf::Message::DefaultConstruct<Ingredience>(arena);
+  Ingredient* New(::google::protobuf::Arena* arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<Ingredient>(arena);
   }
   using ::google::protobuf::Message::CopyFrom;
-  void CopyFrom(const Ingredience& from);
+  void CopyFrom(const Ingredient& from);
   using ::google::protobuf::Message::MergeFrom;
-  void MergeFrom(const Ingredience& from) { Ingredience::MergeImpl(*this, from); }
+  void MergeFrom(const Ingredient& from) { Ingredient::MergeImpl(*this, from); }
 
   private:
   static void MergeImpl(
@@ -191,18 +191,18 @@ class Ingredience final : public ::google::protobuf::Message
   private:
   void SharedCtor(::google::protobuf::Arena* arena);
   static void SharedDtor(MessageLite& self);
-  void InternalSwap(Ingredience* other);
+  void InternalSwap(Ingredient* other);
  private:
   template <typename T>
   friend ::absl::string_view(
       ::google::protobuf::internal::GetAnyMessageName)();
-  static ::absl::string_view FullMessageName() { return "recipe.Ingredience"; }
+  static ::absl::string_view FullMessageName() { return "recipe.Ingredient"; }
 
  protected:
-  explicit Ingredience(::google::protobuf::Arena* arena);
-  Ingredience(::google::protobuf::Arena* arena, const Ingredience& from);
-  Ingredience(::google::protobuf::Arena* arena, Ingredience&& from) noexcept
-      : Ingredience(arena) {
+  explicit Ingredient(::google::protobuf::Arena* arena);
+  Ingredient(::google::protobuf::Arena* arena, const Ingredient& from);
+  Ingredient(::google::protobuf::Arena* arena, Ingredient&& from) noexcept
+      : Ingredient(arena) {
     *this = ::std::move(from);
   }
   const ::google::protobuf::internal::ClassData* GetClassData() const PROTOBUF_FINAL;
@@ -263,13 +263,13 @@ class Ingredience final : public ::google::protobuf::Message
   void _internal_set_amount(float value);
 
   public:
-  // @@protoc_insertion_point(class_scope:recipe.Ingredience)
+  // @@protoc_insertion_point(class_scope:recipe.Ingredient)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<
       2, 3, 0,
-      35, 2>
+      34, 2>
       _table_;
 
   friend class ::google::protobuf::MessageLite;
@@ -285,7 +285,7 @@ class Ingredience final : public ::google::protobuf::Message
                           ::google::protobuf::Arena* arena);
     inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
                           ::google::protobuf::Arena* arena, const Impl_& from,
-                          const Ingredience& from_msg);
+                          const Ingredient& from_msg);
     ::google::protobuf::internal::ArenaStringPtr name_;
     ::google::protobuf::internal::ArenaStringPtr unit_;
     float amount_;
@@ -443,29 +443,29 @@ class Recipe final : public ::google::protobuf::Message
 
   // accessors -------------------------------------------------------
   enum : int {
-    kIngrediencesFieldNumber = 4,
+    kIngredientsFieldNumber = 4,
     kInstructionsFieldNumber = 5,
     kPortionsFieldNumber = 1,
     kActiveTimeFieldNumber = 2,
     kPassiveTimeFieldNumber = 3,
   };
-  // repeated .recipe.Ingredience ingrediences = 4;
-  int ingrediences_size() const;
+  // repeated .recipe.Ingredient ingredients = 4;
+  int ingredients_size() const;
   private:
-  int _internal_ingrediences_size() const;
+  int _internal_ingredients_size() const;
 
   public:
-  void clear_ingrediences() ;
-  ::recipe::Ingredience* mutable_ingrediences(int index);
-  ::google::protobuf::RepeatedPtrField<::recipe::Ingredience>* mutable_ingrediences();
+  void clear_ingredients() ;
+  ::recipe::Ingredient* mutable_ingredients(int index);
+  ::google::protobuf::RepeatedPtrField<::recipe::Ingredient>* mutable_ingredients();
 
   private:
-  const ::google::protobuf::RepeatedPtrField<::recipe::Ingredience>& _internal_ingrediences() const;
-  ::google::protobuf::RepeatedPtrField<::recipe::Ingredience>* _internal_mutable_ingrediences();
+  const ::google::protobuf::RepeatedPtrField<::recipe::Ingredient>& _internal_ingredients() const;
+  ::google::protobuf::RepeatedPtrField<::recipe::Ingredient>* _internal_mutable_ingredients();
   public:
-  const ::recipe::Ingredience& ingrediences(int index) const;
-  ::recipe::Ingredience* add_ingrediences();
-  const ::google::protobuf::RepeatedPtrField<::recipe::Ingredience>& ingrediences() const;
+  const ::recipe::Ingredient& ingredients(int index) const;
+  ::recipe::Ingredient* add_ingredients();
+  const ::google::protobuf::RepeatedPtrField<::recipe::Ingredient>& ingredients() const;
   // repeated string instructions = 5;
   int instructions_size() const;
   private:
@@ -541,7 +541,7 @@ class Recipe final : public ::google::protobuf::Message
     inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
                           ::google::protobuf::Arena* arena, const Impl_& from,
                           const Recipe& from_msg);
-    ::google::protobuf::RepeatedPtrField< ::recipe::Ingredience > ingrediences_;
+    ::google::protobuf::RepeatedPtrField< ::recipe::Ingredient > ingredients_;
     ::google::protobuf::RepeatedPtrField<std::string> instructions_;
     ::uint32_t portions_;
     ::uint32_t active_time_;
@@ -567,124 +567,124 @@ class Recipe final : public ::google::protobuf::Message
 #endif  // __GNUC__
 // -------------------------------------------------------------------
 
-// Ingredience
+// Ingredient
 
 // float amount = 1;
-inline void Ingredience::clear_amount() {
+inline void Ingredient::clear_amount() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.amount_ = 0;
 }
-inline float Ingredience::amount() const {
-  // @@protoc_insertion_point(field_get:recipe.Ingredience.amount)
+inline float Ingredient::amount() const {
+  // @@protoc_insertion_point(field_get:recipe.Ingredient.amount)
   return _internal_amount();
 }
-inline void Ingredience::set_amount(float value) {
+inline void Ingredient::set_amount(float value) {
   _internal_set_amount(value);
-  // @@protoc_insertion_point(field_set:recipe.Ingredience.amount)
+  // @@protoc_insertion_point(field_set:recipe.Ingredient.amount)
 }
-inline float Ingredience::_internal_amount() const {
+inline float Ingredient::_internal_amount() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.amount_;
 }
-inline void Ingredience::_internal_set_amount(float value) {
+inline void Ingredient::_internal_set_amount(float value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.amount_ = value;
 }
 
 // string name = 2;
-inline void Ingredience::clear_name() {
+inline void Ingredient::clear_name() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.name_.ClearToEmpty();
 }
-inline const std::string& Ingredience::name() const
+inline const std::string& Ingredient::name() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:recipe.Ingredience.name)
+  // @@protoc_insertion_point(field_get:recipe.Ingredient.name)
   return _internal_name();
 }
 template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void Ingredience::set_name(Arg_&& arg,
+inline PROTOBUF_ALWAYS_INLINE void Ingredient::set_name(Arg_&& arg,
                                                      Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.name_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:recipe.Ingredience.name)
+  // @@protoc_insertion_point(field_set:recipe.Ingredient.name)
 }
-inline std::string* Ingredience::mutable_name() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline std::string* Ingredient::mutable_name() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_name();
-  // @@protoc_insertion_point(field_mutable:recipe.Ingredience.name)
+  // @@protoc_insertion_point(field_mutable:recipe.Ingredient.name)
   return _s;
 }
-inline const std::string& Ingredience::_internal_name() const {
+inline const std::string& Ingredient::_internal_name() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.name_.Get();
 }
-inline void Ingredience::_internal_set_name(const std::string& value) {
+inline void Ingredient::_internal_set_name(const std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.name_.Set(value, GetArena());
 }
-inline std::string* Ingredience::_internal_mutable_name() {
+inline std::string* Ingredient::_internal_mutable_name() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   return _impl_.name_.Mutable( GetArena());
 }
-inline std::string* Ingredience::release_name() {
+inline std::string* Ingredient::release_name() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:recipe.Ingredience.name)
+  // @@protoc_insertion_point(field_release:recipe.Ingredient.name)
   return _impl_.name_.Release();
 }
-inline void Ingredience::set_allocated_name(std::string* value) {
+inline void Ingredient::set_allocated_name(std::string* value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.name_.SetAllocated(value, GetArena());
   if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.name_.IsDefault()) {
     _impl_.name_.Set("", GetArena());
   }
-  // @@protoc_insertion_point(field_set_allocated:recipe.Ingredience.name)
+  // @@protoc_insertion_point(field_set_allocated:recipe.Ingredient.name)
 }
 
 // string unit = 3;
-inline void Ingredience::clear_unit() {
+inline void Ingredient::clear_unit() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.unit_.ClearToEmpty();
 }
-inline const std::string& Ingredience::unit() const
+inline const std::string& Ingredient::unit() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:recipe.Ingredience.unit)
+  // @@protoc_insertion_point(field_get:recipe.Ingredient.unit)
   return _internal_unit();
 }
 template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void Ingredience::set_unit(Arg_&& arg,
+inline PROTOBUF_ALWAYS_INLINE void Ingredient::set_unit(Arg_&& arg,
                                                      Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.unit_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:recipe.Ingredience.unit)
+  // @@protoc_insertion_point(field_set:recipe.Ingredient.unit)
 }
-inline std::string* Ingredience::mutable_unit() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline std::string* Ingredient::mutable_unit() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_unit();
-  // @@protoc_insertion_point(field_mutable:recipe.Ingredience.unit)
+  // @@protoc_insertion_point(field_mutable:recipe.Ingredient.unit)
   return _s;
 }
-inline const std::string& Ingredience::_internal_unit() const {
+inline const std::string& Ingredient::_internal_unit() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.unit_.Get();
 }
-inline void Ingredience::_internal_set_unit(const std::string& value) {
+inline void Ingredient::_internal_set_unit(const std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.unit_.Set(value, GetArena());
 }
-inline std::string* Ingredience::_internal_mutable_unit() {
+inline std::string* Ingredient::_internal_mutable_unit() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   return _impl_.unit_.Mutable( GetArena());
 }
-inline std::string* Ingredience::release_unit() {
+inline std::string* Ingredient::release_unit() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:recipe.Ingredience.unit)
+  // @@protoc_insertion_point(field_release:recipe.Ingredient.unit)
   return _impl_.unit_.Release();
 }
-inline void Ingredience::set_allocated_unit(std::string* value) {
+inline void Ingredient::set_allocated_unit(std::string* value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.unit_.SetAllocated(value, GetArena());
   if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.unit_.IsDefault()) {
     _impl_.unit_.Set("", GetArena());
   }
-  // @@protoc_insertion_point(field_set_allocated:recipe.Ingredience.unit)
+  // @@protoc_insertion_point(field_set_allocated:recipe.Ingredient.unit)
 }
 
 // -------------------------------------------------------------------
@@ -757,53 +757,53 @@ inline void Recipe::_internal_set_passive_time(::uint32_t value) {
   _impl_.passive_time_ = value;
 }
 
-// repeated .recipe.Ingredience ingrediences = 4;
-inline int Recipe::_internal_ingrediences_size() const {
-  return _internal_ingrediences().size();
+// repeated .recipe.Ingredient ingredients = 4;
+inline int Recipe::_internal_ingredients_size() const {
+  return _internal_ingredients().size();
 }
-inline int Recipe::ingrediences_size() const {
-  return _internal_ingrediences_size();
+inline int Recipe::ingredients_size() const {
+  return _internal_ingredients_size();
 }
-inline void Recipe::clear_ingrediences() {
+inline void Recipe::clear_ingredients() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.ingrediences_.Clear();
+  _impl_.ingredients_.Clear();
 }
-inline ::recipe::Ingredience* Recipe::mutable_ingrediences(int index)
+inline ::recipe::Ingredient* Recipe::mutable_ingredients(int index)
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_mutable:recipe.Recipe.ingrediences)
-  return _internal_mutable_ingrediences()->Mutable(index);
+  // @@protoc_insertion_point(field_mutable:recipe.Recipe.ingredients)
+  return _internal_mutable_ingredients()->Mutable(index);
 }
-inline ::google::protobuf::RepeatedPtrField<::recipe::Ingredience>* Recipe::mutable_ingrediences()
+inline ::google::protobuf::RepeatedPtrField<::recipe::Ingredient>* Recipe::mutable_ingredients()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_mutable_list:recipe.Recipe.ingrediences)
+  // @@protoc_insertion_point(field_mutable_list:recipe.Recipe.ingredients)
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  return _internal_mutable_ingrediences();
+  return _internal_mutable_ingredients();
 }
-inline const ::recipe::Ingredience& Recipe::ingrediences(int index) const
+inline const ::recipe::Ingredient& Recipe::ingredients(int index) const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:recipe.Recipe.ingrediences)
-  return _internal_ingrediences().Get(index);
+  // @@protoc_insertion_point(field_get:recipe.Recipe.ingredients)
+  return _internal_ingredients().Get(index);
 }
-inline ::recipe::Ingredience* Recipe::add_ingrediences() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline ::recipe::Ingredient* Recipe::add_ingredients() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  ::recipe::Ingredience* _add = _internal_mutable_ingrediences()->Add();
-  // @@protoc_insertion_point(field_add:recipe.Recipe.ingrediences)
+  ::recipe::Ingredient* _add = _internal_mutable_ingredients()->Add();
+  // @@protoc_insertion_point(field_add:recipe.Recipe.ingredients)
   return _add;
 }
-inline const ::google::protobuf::RepeatedPtrField<::recipe::Ingredience>& Recipe::ingrediences() const
+inline const ::google::protobuf::RepeatedPtrField<::recipe::Ingredient>& Recipe::ingredients() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_list:recipe.Recipe.ingrediences)
-  return _internal_ingrediences();
+  // @@protoc_insertion_point(field_list:recipe.Recipe.ingredients)
+  return _internal_ingredients();
 }
-inline const ::google::protobuf::RepeatedPtrField<::recipe::Ingredience>&
-Recipe::_internal_ingrediences() const {
+inline const ::google::protobuf::RepeatedPtrField<::recipe::Ingredient>&
+Recipe::_internal_ingredients() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
-  return _impl_.ingrediences_;
+  return _impl_.ingredients_;
 }
-inline ::google::protobuf::RepeatedPtrField<::recipe::Ingredience>*
-Recipe::_internal_mutable_ingrediences() {
+inline ::google::protobuf::RepeatedPtrField<::recipe::Ingredient>*
+Recipe::_internal_mutable_ingredients() {
   ::google::protobuf::internal::TSanRead(&_impl_);
-  return &_impl_.ingrediences_;
+  return &_impl_.ingredients_;
 }
 
 // repeated string instructions = 5;

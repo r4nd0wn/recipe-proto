@@ -2,7 +2,7 @@ syntax = "proto3";
 package recipe;
 
 
-message Ingredience {
+message Ingredient {
     float amount = 1;
     string name = 2;
     string unit = 3;
@@ -13,6 +13,6 @@ message Recipe {
     uint32 portions = 1;
     uint32 active_time = 2;
     uint32 passive_time = 3;
-    repeated Ingredience ingrediences = 4;
+    repeated Ingredient ingredients = 4;
     repeated string instructions = 5;
 }

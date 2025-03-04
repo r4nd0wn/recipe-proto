@@ -25,8 +25,8 @@ public final class RecipeOuterClass {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface IngredienceOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:recipe.Ingredience)
+  public interface IngredientOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:recipe.Ingredient)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -60,12 +60,12 @@ public final class RecipeOuterClass {
         getUnitBytes();
   }
   /**
-   * Protobuf type {@code recipe.Ingredience}
+   * Protobuf type {@code recipe.Ingredient}
    */
-  public static final class Ingredience extends
+  public static final class Ingredient extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:recipe.Ingredience)
-      IngredienceOrBuilder {
+      // @@protoc_insertion_point(message_implements:recipe.Ingredient)
+      IngredientOrBuilder {
   private static final long serialVersionUID = 0L;
     static {
       com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
@@ -74,28 +74,28 @@ public final class RecipeOuterClass {
         /* minor= */ 29,
         /* patch= */ 3,
         /* suffix= */ "",
-        Ingredience.class.getName());
+        Ingredient.class.getName());
     }
-    // Use Ingredience.newBuilder() to construct.
-    private Ingredience(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    // Use Ingredient.newBuilder() to construct.
+    private Ingredient(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
-    private Ingredience() {
+    private Ingredient() {
       name_ = "";
       unit_ = "";
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return recipe.RecipeOuterClass.internal_static_recipe_Ingredience_descriptor;
+      return recipe.RecipeOuterClass.internal_static_recipe_Ingredient_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return recipe.RecipeOuterClass.internal_static_recipe_Ingredience_fieldAccessorTable
+      return recipe.RecipeOuterClass.internal_static_recipe_Ingredient_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              recipe.RecipeOuterClass.Ingredience.class, recipe.RecipeOuterClass.Ingredience.Builder.class);
+              recipe.RecipeOuterClass.Ingredient.class, recipe.RecipeOuterClass.Ingredient.Builder.class);
     }
 
     public static final int AMOUNT_FIELD_NUMBER = 1;
@@ -239,10 +239,10 @@ public final class RecipeOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof recipe.RecipeOuterClass.Ingredience)) {
+      if (!(obj instanceof recipe.RecipeOuterClass.Ingredient)) {
         return super.equals(obj);
       }
-      recipe.RecipeOuterClass.Ingredience other = (recipe.RecipeOuterClass.Ingredience) obj;
+      recipe.RecipeOuterClass.Ingredient other = (recipe.RecipeOuterClass.Ingredient) obj;
 
       if (java.lang.Float.floatToIntBits(getAmount())
           != java.lang.Float.floatToIntBits(
@@ -274,44 +274,44 @@ public final class RecipeOuterClass {
       return hash;
     }
 
-    public static recipe.RecipeOuterClass.Ingredience parseFrom(
+    public static recipe.RecipeOuterClass.Ingredient parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static recipe.RecipeOuterClass.Ingredience parseFrom(
+    public static recipe.RecipeOuterClass.Ingredient parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static recipe.RecipeOuterClass.Ingredience parseFrom(
+    public static recipe.RecipeOuterClass.Ingredient parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static recipe.RecipeOuterClass.Ingredience parseFrom(
+    public static recipe.RecipeOuterClass.Ingredient parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static recipe.RecipeOuterClass.Ingredience parseFrom(byte[] data)
+    public static recipe.RecipeOuterClass.Ingredient parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static recipe.RecipeOuterClass.Ingredience parseFrom(
+    public static recipe.RecipeOuterClass.Ingredient parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static recipe.RecipeOuterClass.Ingredience parseFrom(java.io.InputStream input)
+    public static recipe.RecipeOuterClass.Ingredient parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static recipe.RecipeOuterClass.Ingredience parseFrom(
+    public static recipe.RecipeOuterClass.Ingredient parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -319,26 +319,26 @@ public final class RecipeOuterClass {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static recipe.RecipeOuterClass.Ingredience parseDelimitedFrom(java.io.InputStream input)
+    public static recipe.RecipeOuterClass.Ingredient parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static recipe.RecipeOuterClass.Ingredience parseDelimitedFrom(
+    public static recipe.RecipeOuterClass.Ingredient parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static recipe.RecipeOuterClass.Ingredience parseFrom(
+    public static recipe.RecipeOuterClass.Ingredient parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static recipe.RecipeOuterClass.Ingredience parseFrom(
+    public static recipe.RecipeOuterClass.Ingredient parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -351,7 +351,7 @@ public final class RecipeOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(recipe.RecipeOuterClass.Ingredience prototype) {
+    public static Builder newBuilder(recipe.RecipeOuterClass.Ingredient prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -367,26 +367,26 @@ public final class RecipeOuterClass {
       return builder;
     }
     /**
-     * Protobuf type {@code recipe.Ingredience}
+     * Protobuf type {@code recipe.Ingredient}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:recipe.Ingredience)
-        recipe.RecipeOuterClass.IngredienceOrBuilder {
+        // @@protoc_insertion_point(builder_implements:recipe.Ingredient)
+        recipe.RecipeOuterClass.IngredientOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return recipe.RecipeOuterClass.internal_static_recipe_Ingredience_descriptor;
+        return recipe.RecipeOuterClass.internal_static_recipe_Ingredient_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return recipe.RecipeOuterClass.internal_static_recipe_Ingredience_fieldAccessorTable
+        return recipe.RecipeOuterClass.internal_static_recipe_Ingredient_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                recipe.RecipeOuterClass.Ingredience.class, recipe.RecipeOuterClass.Ingredience.Builder.class);
+                recipe.RecipeOuterClass.Ingredient.class, recipe.RecipeOuterClass.Ingredient.Builder.class);
       }
 
-      // Construct using recipe.RecipeOuterClass.Ingredience.newBuilder()
+      // Construct using recipe.RecipeOuterClass.Ingredient.newBuilder()
       private Builder() {
 
       }
@@ -409,17 +409,17 @@ public final class RecipeOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return recipe.RecipeOuterClass.internal_static_recipe_Ingredience_descriptor;
+        return recipe.RecipeOuterClass.internal_static_recipe_Ingredient_descriptor;
       }
 
       @java.lang.Override
-      public recipe.RecipeOuterClass.Ingredience getDefaultInstanceForType() {
-        return recipe.RecipeOuterClass.Ingredience.getDefaultInstance();
+      public recipe.RecipeOuterClass.Ingredient getDefaultInstanceForType() {
+        return recipe.RecipeOuterClass.Ingredient.getDefaultInstance();
       }
 
       @java.lang.Override
-      public recipe.RecipeOuterClass.Ingredience build() {
-        recipe.RecipeOuterClass.Ingredience result = buildPartial();
+      public recipe.RecipeOuterClass.Ingredient build() {
+        recipe.RecipeOuterClass.Ingredient result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -427,14 +427,14 @@ public final class RecipeOuterClass {
       }
 
       @java.lang.Override
-      public recipe.RecipeOuterClass.Ingredience buildPartial() {
-        recipe.RecipeOuterClass.Ingredience result = new recipe.RecipeOuterClass.Ingredience(this);
+      public recipe.RecipeOuterClass.Ingredient buildPartial() {
+        recipe.RecipeOuterClass.Ingredient result = new recipe.RecipeOuterClass.Ingredient(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(recipe.RecipeOuterClass.Ingredience result) {
+      private void buildPartial0(recipe.RecipeOuterClass.Ingredient result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.amount_ = amount_;
@@ -449,16 +449,16 @@ public final class RecipeOuterClass {
 
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof recipe.RecipeOuterClass.Ingredience) {
-          return mergeFrom((recipe.RecipeOuterClass.Ingredience)other);
+        if (other instanceof recipe.RecipeOuterClass.Ingredient) {
+          return mergeFrom((recipe.RecipeOuterClass.Ingredient)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(recipe.RecipeOuterClass.Ingredience other) {
-        if (other == recipe.RecipeOuterClass.Ingredience.getDefaultInstance()) return this;
+      public Builder mergeFrom(recipe.RecipeOuterClass.Ingredient other) {
+        if (other == recipe.RecipeOuterClass.Ingredient.getDefaultInstance()) return this;
         if (other.getAmount() != 0F) {
           setAmount(other.getAmount());
         }
@@ -706,23 +706,23 @@ public final class RecipeOuterClass {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:recipe.Ingredience)
+      // @@protoc_insertion_point(builder_scope:recipe.Ingredient)
     }
 
-    // @@protoc_insertion_point(class_scope:recipe.Ingredience)
-    private static final recipe.RecipeOuterClass.Ingredience DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:recipe.Ingredient)
+    private static final recipe.RecipeOuterClass.Ingredient DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new recipe.RecipeOuterClass.Ingredience();
+      DEFAULT_INSTANCE = new recipe.RecipeOuterClass.Ingredient();
     }
 
-    public static recipe.RecipeOuterClass.Ingredience getDefaultInstance() {
+    public static recipe.RecipeOuterClass.Ingredient getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Ingredience>
-        PARSER = new com.google.protobuf.AbstractParser<Ingredience>() {
+    private static final com.google.protobuf.Parser<Ingredient>
+        PARSER = new com.google.protobuf.AbstractParser<Ingredient>() {
       @java.lang.Override
-      public Ingredience parsePartialFrom(
+      public Ingredient parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -741,17 +741,17 @@ public final class RecipeOuterClass {
       }
     };
 
-    public static com.google.protobuf.Parser<Ingredience> parser() {
+    public static com.google.protobuf.Parser<Ingredient> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<Ingredience> getParserForType() {
+    public com.google.protobuf.Parser<Ingredient> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public recipe.RecipeOuterClass.Ingredience getDefaultInstanceForType() {
+    public recipe.RecipeOuterClass.Ingredient getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -780,27 +780,27 @@ public final class RecipeOuterClass {
     int getPassiveTime();
 
     /**
-     * <code>repeated .recipe.Ingredience ingrediences = 4;</code>
+     * <code>repeated .recipe.Ingredient ingredients = 4;</code>
      */
-    java.util.List<recipe.RecipeOuterClass.Ingredience> 
-        getIngrediencesList();
+    java.util.List<recipe.RecipeOuterClass.Ingredient> 
+        getIngredientsList();
     /**
-     * <code>repeated .recipe.Ingredience ingrediences = 4;</code>
+     * <code>repeated .recipe.Ingredient ingredients = 4;</code>
      */
-    recipe.RecipeOuterClass.Ingredience getIngrediences(int index);
+    recipe.RecipeOuterClass.Ingredient getIngredients(int index);
     /**
-     * <code>repeated .recipe.Ingredience ingrediences = 4;</code>
+     * <code>repeated .recipe.Ingredient ingredients = 4;</code>
      */
-    int getIngrediencesCount();
+    int getIngredientsCount();
     /**
-     * <code>repeated .recipe.Ingredience ingrediences = 4;</code>
+     * <code>repeated .recipe.Ingredient ingredients = 4;</code>
      */
-    java.util.List<? extends recipe.RecipeOuterClass.IngredienceOrBuilder> 
-        getIngrediencesOrBuilderList();
+    java.util.List<? extends recipe.RecipeOuterClass.IngredientOrBuilder> 
+        getIngredientsOrBuilderList();
     /**
-     * <code>repeated .recipe.Ingredience ingrediences = 4;</code>
+     * <code>repeated .recipe.Ingredient ingredients = 4;</code>
      */
-    recipe.RecipeOuterClass.IngredienceOrBuilder getIngrediencesOrBuilder(
+    recipe.RecipeOuterClass.IngredientOrBuilder getIngredientsOrBuilder(
         int index);
 
     /**
@@ -850,7 +850,7 @@ public final class RecipeOuterClass {
       super(builder);
     }
     private Recipe() {
-      ingrediences_ = java.util.Collections.emptyList();
+      ingredients_ = java.util.Collections.emptyList();
       instructions_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
     }
@@ -901,45 +901,45 @@ public final class RecipeOuterClass {
       return passiveTime_;
     }
 
-    public static final int INGREDIENCES_FIELD_NUMBER = 4;
+    public static final int INGREDIENTS_FIELD_NUMBER = 4;
     @SuppressWarnings("serial")
-    private java.util.List<recipe.RecipeOuterClass.Ingredience> ingrediences_;
+    private java.util.List<recipe.RecipeOuterClass.Ingredient> ingredients_;
     /**
-     * <code>repeated .recipe.Ingredience ingrediences = 4;</code>
+     * <code>repeated .recipe.Ingredient ingredients = 4;</code>
      */
     @java.lang.Override
-    public java.util.List<recipe.RecipeOuterClass.Ingredience> getIngrediencesList() {
-      return ingrediences_;
+    public java.util.List<recipe.RecipeOuterClass.Ingredient> getIngredientsList() {
+      return ingredients_;
     }
     /**
-     * <code>repeated .recipe.Ingredience ingrediences = 4;</code>
+     * <code>repeated .recipe.Ingredient ingredients = 4;</code>
      */
     @java.lang.Override
-    public java.util.List<? extends recipe.RecipeOuterClass.IngredienceOrBuilder> 
-        getIngrediencesOrBuilderList() {
-      return ingrediences_;
+    public java.util.List<? extends recipe.RecipeOuterClass.IngredientOrBuilder> 
+        getIngredientsOrBuilderList() {
+      return ingredients_;
     }
     /**
-     * <code>repeated .recipe.Ingredience ingrediences = 4;</code>
+     * <code>repeated .recipe.Ingredient ingredients = 4;</code>
      */
     @java.lang.Override
-    public int getIngrediencesCount() {
-      return ingrediences_.size();
+    public int getIngredientsCount() {
+      return ingredients_.size();
     }
     /**
-     * <code>repeated .recipe.Ingredience ingrediences = 4;</code>
+     * <code>repeated .recipe.Ingredient ingredients = 4;</code>
      */
     @java.lang.Override
-    public recipe.RecipeOuterClass.Ingredience getIngrediences(int index) {
-      return ingrediences_.get(index);
+    public recipe.RecipeOuterClass.Ingredient getIngredients(int index) {
+      return ingredients_.get(index);
     }
     /**
-     * <code>repeated .recipe.Ingredience ingrediences = 4;</code>
+     * <code>repeated .recipe.Ingredient ingredients = 4;</code>
      */
     @java.lang.Override
-    public recipe.RecipeOuterClass.IngredienceOrBuilder getIngrediencesOrBuilder(
+    public recipe.RecipeOuterClass.IngredientOrBuilder getIngredientsOrBuilder(
         int index) {
-      return ingrediences_.get(index);
+      return ingredients_.get(index);
     }
 
     public static final int INSTRUCTIONS_FIELD_NUMBER = 5;
@@ -1002,8 +1002,8 @@ public final class RecipeOuterClass {
       if (passiveTime_ != 0) {
         output.writeUInt32(3, passiveTime_);
       }
-      for (int i = 0; i < ingrediences_.size(); i++) {
-        output.writeMessage(4, ingrediences_.get(i));
+      for (int i = 0; i < ingredients_.size(); i++) {
+        output.writeMessage(4, ingredients_.get(i));
       }
       for (int i = 0; i < instructions_.size(); i++) {
         com.google.protobuf.GeneratedMessage.writeString(output, 5, instructions_.getRaw(i));
@@ -1029,9 +1029,9 @@ public final class RecipeOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(3, passiveTime_);
       }
-      for (int i = 0; i < ingrediences_.size(); i++) {
+      for (int i = 0; i < ingredients_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, ingrediences_.get(i));
+          .computeMessageSize(4, ingredients_.get(i));
       }
       {
         int dataSize = 0;
@@ -1062,8 +1062,8 @@ public final class RecipeOuterClass {
           != other.getActiveTime()) return false;
       if (getPassiveTime()
           != other.getPassiveTime()) return false;
-      if (!getIngrediencesList()
-          .equals(other.getIngrediencesList())) return false;
+      if (!getIngredientsList()
+          .equals(other.getIngredientsList())) return false;
       if (!getInstructionsList()
           .equals(other.getInstructionsList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -1083,9 +1083,9 @@ public final class RecipeOuterClass {
       hash = (53 * hash) + getActiveTime();
       hash = (37 * hash) + PASSIVE_TIME_FIELD_NUMBER;
       hash = (53 * hash) + getPassiveTime();
-      if (getIngrediencesCount() > 0) {
-        hash = (37 * hash) + INGREDIENCES_FIELD_NUMBER;
-        hash = (53 * hash) + getIngrediencesList().hashCode();
+      if (getIngredientsCount() > 0) {
+        hash = (37 * hash) + INGREDIENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getIngredientsList().hashCode();
       }
       if (getInstructionsCount() > 0) {
         hash = (37 * hash) + INSTRUCTIONS_FIELD_NUMBER;
@@ -1225,11 +1225,11 @@ public final class RecipeOuterClass {
         portions_ = 0;
         activeTime_ = 0;
         passiveTime_ = 0;
-        if (ingrediencesBuilder_ == null) {
-          ingrediences_ = java.util.Collections.emptyList();
+        if (ingredientsBuilder_ == null) {
+          ingredients_ = java.util.Collections.emptyList();
         } else {
-          ingrediences_ = null;
-          ingrediencesBuilder_.clear();
+          ingredients_ = null;
+          ingredientsBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000008);
         instructions_ =
@@ -1267,14 +1267,14 @@ public final class RecipeOuterClass {
       }
 
       private void buildPartialRepeatedFields(recipe.RecipeOuterClass.Recipe result) {
-        if (ingrediencesBuilder_ == null) {
+        if (ingredientsBuilder_ == null) {
           if (((bitField0_ & 0x00000008) != 0)) {
-            ingrediences_ = java.util.Collections.unmodifiableList(ingrediences_);
+            ingredients_ = java.util.Collections.unmodifiableList(ingredients_);
             bitField0_ = (bitField0_ & ~0x00000008);
           }
-          result.ingrediences_ = ingrediences_;
+          result.ingredients_ = ingredients_;
         } else {
-          result.ingrediences_ = ingrediencesBuilder_.build();
+          result.ingredients_ = ingredientsBuilder_.build();
         }
       }
 
@@ -1316,29 +1316,29 @@ public final class RecipeOuterClass {
         if (other.getPassiveTime() != 0) {
           setPassiveTime(other.getPassiveTime());
         }
-        if (ingrediencesBuilder_ == null) {
-          if (!other.ingrediences_.isEmpty()) {
-            if (ingrediences_.isEmpty()) {
-              ingrediences_ = other.ingrediences_;
+        if (ingredientsBuilder_ == null) {
+          if (!other.ingredients_.isEmpty()) {
+            if (ingredients_.isEmpty()) {
+              ingredients_ = other.ingredients_;
               bitField0_ = (bitField0_ & ~0x00000008);
             } else {
-              ensureIngrediencesIsMutable();
-              ingrediences_.addAll(other.ingrediences_);
+              ensureIngredientsIsMutable();
+              ingredients_.addAll(other.ingredients_);
             }
             onChanged();
           }
         } else {
-          if (!other.ingrediences_.isEmpty()) {
-            if (ingrediencesBuilder_.isEmpty()) {
-              ingrediencesBuilder_.dispose();
-              ingrediencesBuilder_ = null;
-              ingrediences_ = other.ingrediences_;
+          if (!other.ingredients_.isEmpty()) {
+            if (ingredientsBuilder_.isEmpty()) {
+              ingredientsBuilder_.dispose();
+              ingredientsBuilder_ = null;
+              ingredients_ = other.ingredients_;
               bitField0_ = (bitField0_ & ~0x00000008);
-              ingrediencesBuilder_ = 
+              ingredientsBuilder_ = 
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                   getIngrediencesFieldBuilder() : null;
+                   getIngredientsFieldBuilder() : null;
             } else {
-              ingrediencesBuilder_.addAllMessages(other.ingrediences_);
+              ingredientsBuilder_.addAllMessages(other.ingredients_);
             }
           }
         }
@@ -1394,15 +1394,15 @@ public final class RecipeOuterClass {
                 break;
               } // case 24
               case 34: {
-                recipe.RecipeOuterClass.Ingredience m =
+                recipe.RecipeOuterClass.Ingredient m =
                     input.readMessage(
-                        recipe.RecipeOuterClass.Ingredience.parser(),
+                        recipe.RecipeOuterClass.Ingredient.parser(),
                         extensionRegistry);
-                if (ingrediencesBuilder_ == null) {
-                  ensureIngrediencesIsMutable();
-                  ingrediences_.add(m);
+                if (ingredientsBuilder_ == null) {
+                  ensureIngredientsIsMutable();
+                  ingredients_.add(m);
                 } else {
-                  ingrediencesBuilder_.addMessage(m);
+                  ingredientsBuilder_.addMessage(m);
                 }
                 break;
               } // case 34
@@ -1525,244 +1525,244 @@ public final class RecipeOuterClass {
         return this;
       }
 
-      private java.util.List<recipe.RecipeOuterClass.Ingredience> ingrediences_ =
+      private java.util.List<recipe.RecipeOuterClass.Ingredient> ingredients_ =
         java.util.Collections.emptyList();
-      private void ensureIngrediencesIsMutable() {
+      private void ensureIngredientsIsMutable() {
         if (!((bitField0_ & 0x00000008) != 0)) {
-          ingrediences_ = new java.util.ArrayList<recipe.RecipeOuterClass.Ingredience>(ingrediences_);
+          ingredients_ = new java.util.ArrayList<recipe.RecipeOuterClass.Ingredient>(ingredients_);
           bitField0_ |= 0x00000008;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilder<
-          recipe.RecipeOuterClass.Ingredience, recipe.RecipeOuterClass.Ingredience.Builder, recipe.RecipeOuterClass.IngredienceOrBuilder> ingrediencesBuilder_;
+          recipe.RecipeOuterClass.Ingredient, recipe.RecipeOuterClass.Ingredient.Builder, recipe.RecipeOuterClass.IngredientOrBuilder> ingredientsBuilder_;
 
       /**
-       * <code>repeated .recipe.Ingredience ingrediences = 4;</code>
+       * <code>repeated .recipe.Ingredient ingredients = 4;</code>
        */
-      public java.util.List<recipe.RecipeOuterClass.Ingredience> getIngrediencesList() {
-        if (ingrediencesBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(ingrediences_);
+      public java.util.List<recipe.RecipeOuterClass.Ingredient> getIngredientsList() {
+        if (ingredientsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(ingredients_);
         } else {
-          return ingrediencesBuilder_.getMessageList();
+          return ingredientsBuilder_.getMessageList();
         }
       }
       /**
-       * <code>repeated .recipe.Ingredience ingrediences = 4;</code>
+       * <code>repeated .recipe.Ingredient ingredients = 4;</code>
        */
-      public int getIngrediencesCount() {
-        if (ingrediencesBuilder_ == null) {
-          return ingrediences_.size();
+      public int getIngredientsCount() {
+        if (ingredientsBuilder_ == null) {
+          return ingredients_.size();
         } else {
-          return ingrediencesBuilder_.getCount();
+          return ingredientsBuilder_.getCount();
         }
       }
       /**
-       * <code>repeated .recipe.Ingredience ingrediences = 4;</code>
+       * <code>repeated .recipe.Ingredient ingredients = 4;</code>
        */
-      public recipe.RecipeOuterClass.Ingredience getIngrediences(int index) {
-        if (ingrediencesBuilder_ == null) {
-          return ingrediences_.get(index);
+      public recipe.RecipeOuterClass.Ingredient getIngredients(int index) {
+        if (ingredientsBuilder_ == null) {
+          return ingredients_.get(index);
         } else {
-          return ingrediencesBuilder_.getMessage(index);
+          return ingredientsBuilder_.getMessage(index);
         }
       }
       /**
-       * <code>repeated .recipe.Ingredience ingrediences = 4;</code>
+       * <code>repeated .recipe.Ingredient ingredients = 4;</code>
        */
-      public Builder setIngrediences(
-          int index, recipe.RecipeOuterClass.Ingredience value) {
-        if (ingrediencesBuilder_ == null) {
+      public Builder setIngredients(
+          int index, recipe.RecipeOuterClass.Ingredient value) {
+        if (ingredientsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureIngrediencesIsMutable();
-          ingrediences_.set(index, value);
+          ensureIngredientsIsMutable();
+          ingredients_.set(index, value);
           onChanged();
         } else {
-          ingrediencesBuilder_.setMessage(index, value);
+          ingredientsBuilder_.setMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .recipe.Ingredience ingrediences = 4;</code>
+       * <code>repeated .recipe.Ingredient ingredients = 4;</code>
        */
-      public Builder setIngrediences(
-          int index, recipe.RecipeOuterClass.Ingredience.Builder builderForValue) {
-        if (ingrediencesBuilder_ == null) {
-          ensureIngrediencesIsMutable();
-          ingrediences_.set(index, builderForValue.build());
+      public Builder setIngredients(
+          int index, recipe.RecipeOuterClass.Ingredient.Builder builderForValue) {
+        if (ingredientsBuilder_ == null) {
+          ensureIngredientsIsMutable();
+          ingredients_.set(index, builderForValue.build());
           onChanged();
         } else {
-          ingrediencesBuilder_.setMessage(index, builderForValue.build());
+          ingredientsBuilder_.setMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .recipe.Ingredience ingrediences = 4;</code>
+       * <code>repeated .recipe.Ingredient ingredients = 4;</code>
        */
-      public Builder addIngrediences(recipe.RecipeOuterClass.Ingredience value) {
-        if (ingrediencesBuilder_ == null) {
+      public Builder addIngredients(recipe.RecipeOuterClass.Ingredient value) {
+        if (ingredientsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureIngrediencesIsMutable();
-          ingrediences_.add(value);
+          ensureIngredientsIsMutable();
+          ingredients_.add(value);
           onChanged();
         } else {
-          ingrediencesBuilder_.addMessage(value);
+          ingredientsBuilder_.addMessage(value);
         }
         return this;
       }
       /**
-       * <code>repeated .recipe.Ingredience ingrediences = 4;</code>
+       * <code>repeated .recipe.Ingredient ingredients = 4;</code>
        */
-      public Builder addIngrediences(
-          int index, recipe.RecipeOuterClass.Ingredience value) {
-        if (ingrediencesBuilder_ == null) {
+      public Builder addIngredients(
+          int index, recipe.RecipeOuterClass.Ingredient value) {
+        if (ingredientsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureIngrediencesIsMutable();
-          ingrediences_.add(index, value);
+          ensureIngredientsIsMutable();
+          ingredients_.add(index, value);
           onChanged();
         } else {
-          ingrediencesBuilder_.addMessage(index, value);
+          ingredientsBuilder_.addMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .recipe.Ingredience ingrediences = 4;</code>
+       * <code>repeated .recipe.Ingredient ingredients = 4;</code>
        */
-      public Builder addIngrediences(
-          recipe.RecipeOuterClass.Ingredience.Builder builderForValue) {
-        if (ingrediencesBuilder_ == null) {
-          ensureIngrediencesIsMutable();
-          ingrediences_.add(builderForValue.build());
+      public Builder addIngredients(
+          recipe.RecipeOuterClass.Ingredient.Builder builderForValue) {
+        if (ingredientsBuilder_ == null) {
+          ensureIngredientsIsMutable();
+          ingredients_.add(builderForValue.build());
           onChanged();
         } else {
-          ingrediencesBuilder_.addMessage(builderForValue.build());
+          ingredientsBuilder_.addMessage(builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .recipe.Ingredience ingrediences = 4;</code>
+       * <code>repeated .recipe.Ingredient ingredients = 4;</code>
        */
-      public Builder addIngrediences(
-          int index, recipe.RecipeOuterClass.Ingredience.Builder builderForValue) {
-        if (ingrediencesBuilder_ == null) {
-          ensureIngrediencesIsMutable();
-          ingrediences_.add(index, builderForValue.build());
+      public Builder addIngredients(
+          int index, recipe.RecipeOuterClass.Ingredient.Builder builderForValue) {
+        if (ingredientsBuilder_ == null) {
+          ensureIngredientsIsMutable();
+          ingredients_.add(index, builderForValue.build());
           onChanged();
         } else {
-          ingrediencesBuilder_.addMessage(index, builderForValue.build());
+          ingredientsBuilder_.addMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .recipe.Ingredience ingrediences = 4;</code>
+       * <code>repeated .recipe.Ingredient ingredients = 4;</code>
        */
-      public Builder addAllIngrediences(
-          java.lang.Iterable<? extends recipe.RecipeOuterClass.Ingredience> values) {
-        if (ingrediencesBuilder_ == null) {
-          ensureIngrediencesIsMutable();
+      public Builder addAllIngredients(
+          java.lang.Iterable<? extends recipe.RecipeOuterClass.Ingredient> values) {
+        if (ingredientsBuilder_ == null) {
+          ensureIngredientsIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, ingrediences_);
+              values, ingredients_);
           onChanged();
         } else {
-          ingrediencesBuilder_.addAllMessages(values);
+          ingredientsBuilder_.addAllMessages(values);
         }
         return this;
       }
       /**
-       * <code>repeated .recipe.Ingredience ingrediences = 4;</code>
+       * <code>repeated .recipe.Ingredient ingredients = 4;</code>
        */
-      public Builder clearIngrediences() {
-        if (ingrediencesBuilder_ == null) {
-          ingrediences_ = java.util.Collections.emptyList();
+      public Builder clearIngredients() {
+        if (ingredientsBuilder_ == null) {
+          ingredients_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000008);
           onChanged();
         } else {
-          ingrediencesBuilder_.clear();
+          ingredientsBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>repeated .recipe.Ingredience ingrediences = 4;</code>
+       * <code>repeated .recipe.Ingredient ingredients = 4;</code>
        */
-      public Builder removeIngrediences(int index) {
-        if (ingrediencesBuilder_ == null) {
-          ensureIngrediencesIsMutable();
-          ingrediences_.remove(index);
+      public Builder removeIngredients(int index) {
+        if (ingredientsBuilder_ == null) {
+          ensureIngredientsIsMutable();
+          ingredients_.remove(index);
           onChanged();
         } else {
-          ingrediencesBuilder_.remove(index);
+          ingredientsBuilder_.remove(index);
         }
         return this;
       }
       /**
-       * <code>repeated .recipe.Ingredience ingrediences = 4;</code>
+       * <code>repeated .recipe.Ingredient ingredients = 4;</code>
        */
-      public recipe.RecipeOuterClass.Ingredience.Builder getIngrediencesBuilder(
+      public recipe.RecipeOuterClass.Ingredient.Builder getIngredientsBuilder(
           int index) {
-        return getIngrediencesFieldBuilder().getBuilder(index);
+        return getIngredientsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .recipe.Ingredience ingrediences = 4;</code>
+       * <code>repeated .recipe.Ingredient ingredients = 4;</code>
        */
-      public recipe.RecipeOuterClass.IngredienceOrBuilder getIngrediencesOrBuilder(
+      public recipe.RecipeOuterClass.IngredientOrBuilder getIngredientsOrBuilder(
           int index) {
-        if (ingrediencesBuilder_ == null) {
-          return ingrediences_.get(index);  } else {
-          return ingrediencesBuilder_.getMessageOrBuilder(index);
+        if (ingredientsBuilder_ == null) {
+          return ingredients_.get(index);  } else {
+          return ingredientsBuilder_.getMessageOrBuilder(index);
         }
       }
       /**
-       * <code>repeated .recipe.Ingredience ingrediences = 4;</code>
+       * <code>repeated .recipe.Ingredient ingredients = 4;</code>
        */
-      public java.util.List<? extends recipe.RecipeOuterClass.IngredienceOrBuilder> 
-           getIngrediencesOrBuilderList() {
-        if (ingrediencesBuilder_ != null) {
-          return ingrediencesBuilder_.getMessageOrBuilderList();
+      public java.util.List<? extends recipe.RecipeOuterClass.IngredientOrBuilder> 
+           getIngredientsOrBuilderList() {
+        if (ingredientsBuilder_ != null) {
+          return ingredientsBuilder_.getMessageOrBuilderList();
         } else {
-          return java.util.Collections.unmodifiableList(ingrediences_);
+          return java.util.Collections.unmodifiableList(ingredients_);
         }
       }
       /**
-       * <code>repeated .recipe.Ingredience ingrediences = 4;</code>
+       * <code>repeated .recipe.Ingredient ingredients = 4;</code>
        */
-      public recipe.RecipeOuterClass.Ingredience.Builder addIngrediencesBuilder() {
-        return getIngrediencesFieldBuilder().addBuilder(
-            recipe.RecipeOuterClass.Ingredience.getDefaultInstance());
+      public recipe.RecipeOuterClass.Ingredient.Builder addIngredientsBuilder() {
+        return getIngredientsFieldBuilder().addBuilder(
+            recipe.RecipeOuterClass.Ingredient.getDefaultInstance());
       }
       /**
-       * <code>repeated .recipe.Ingredience ingrediences = 4;</code>
+       * <code>repeated .recipe.Ingredient ingredients = 4;</code>
        */
-      public recipe.RecipeOuterClass.Ingredience.Builder addIngrediencesBuilder(
+      public recipe.RecipeOuterClass.Ingredient.Builder addIngredientsBuilder(
           int index) {
-        return getIngrediencesFieldBuilder().addBuilder(
-            index, recipe.RecipeOuterClass.Ingredience.getDefaultInstance());
+        return getIngredientsFieldBuilder().addBuilder(
+            index, recipe.RecipeOuterClass.Ingredient.getDefaultInstance());
       }
       /**
-       * <code>repeated .recipe.Ingredience ingrediences = 4;</code>
+       * <code>repeated .recipe.Ingredient ingredients = 4;</code>
        */
-      public java.util.List<recipe.RecipeOuterClass.Ingredience.Builder> 
-           getIngrediencesBuilderList() {
-        return getIngrediencesFieldBuilder().getBuilderList();
+      public java.util.List<recipe.RecipeOuterClass.Ingredient.Builder> 
+           getIngredientsBuilderList() {
+        return getIngredientsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          recipe.RecipeOuterClass.Ingredience, recipe.RecipeOuterClass.Ingredience.Builder, recipe.RecipeOuterClass.IngredienceOrBuilder> 
-          getIngrediencesFieldBuilder() {
-        if (ingrediencesBuilder_ == null) {
-          ingrediencesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              recipe.RecipeOuterClass.Ingredience, recipe.RecipeOuterClass.Ingredience.Builder, recipe.RecipeOuterClass.IngredienceOrBuilder>(
-                  ingrediences_,
+          recipe.RecipeOuterClass.Ingredient, recipe.RecipeOuterClass.Ingredient.Builder, recipe.RecipeOuterClass.IngredientOrBuilder> 
+          getIngredientsFieldBuilder() {
+        if (ingredientsBuilder_ == null) {
+          ingredientsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              recipe.RecipeOuterClass.Ingredient, recipe.RecipeOuterClass.Ingredient.Builder, recipe.RecipeOuterClass.IngredientOrBuilder>(
+                  ingredients_,
                   ((bitField0_ & 0x00000008) != 0),
                   getParentForChildren(),
                   isClean());
-          ingrediences_ = null;
+          ingredients_ = null;
         }
-        return ingrediencesBuilder_;
+        return ingredientsBuilder_;
       }
 
       private com.google.protobuf.LazyStringArrayList instructions_ =
@@ -1928,10 +1928,10 @@ public final class RecipeOuterClass {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_recipe_Ingredience_descriptor;
+    internal_static_recipe_Ingredient_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_recipe_Ingredience_fieldAccessorTable;
+      internal_static_recipe_Ingredient_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_recipe_Recipe_descriptor;
   private static final 
@@ -1946,29 +1946,29 @@ public final class RecipeOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\014recipe.proto\022\006recipe\"9\n\013Ingredience\022\016\n" +
-      "\006amount\030\001 \001(\002\022\014\n\004name\030\002 \001(\t\022\014\n\004unit\030\003 \001(" +
-      "\t\"\206\001\n\006Recipe\022\020\n\010portions\030\001 \001(\r\022\023\n\013active" +
-      "_time\030\002 \001(\r\022\024\n\014passive_time\030\003 \001(\r\022)\n\014ing" +
-      "rediences\030\004 \003(\0132\023.recipe.Ingredience\022\024\n\014" +
-      "instructions\030\005 \003(\tb\006proto3"
+      "\n\014recipe.proto\022\006recipe\"8\n\nIngredient\022\016\n\006" +
+      "amount\030\001 \001(\002\022\014\n\004name\030\002 \001(\t\022\014\n\004unit\030\003 \001(\t" +
+      "\"\204\001\n\006Recipe\022\020\n\010portions\030\001 \001(\r\022\023\n\013active_" +
+      "time\030\002 \001(\r\022\024\n\014passive_time\030\003 \001(\r\022\'\n\013ingr" +
+      "edients\030\004 \003(\0132\022.recipe.Ingredient\022\024\n\014ins" +
+      "tructions\030\005 \003(\tb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         });
-    internal_static_recipe_Ingredience_descriptor =
+    internal_static_recipe_Ingredient_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_recipe_Ingredience_fieldAccessorTable = new
+    internal_static_recipe_Ingredient_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_recipe_Ingredience_descriptor,
+        internal_static_recipe_Ingredient_descriptor,
         new java.lang.String[] { "Amount", "Name", "Unit", });
     internal_static_recipe_Recipe_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_recipe_Recipe_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_recipe_Recipe_descriptor,
-        new java.lang.String[] { "Portions", "ActiveTime", "PassiveTime", "Ingrediences", "Instructions", });
+        new java.lang.String[] { "Portions", "ActiveTime", "PassiveTime", "Ingredients", "Instructions", });
     descriptor.resolveAllFeaturesImmutable();
   }
 

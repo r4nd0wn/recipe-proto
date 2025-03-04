@@ -20,7 +20,7 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
   typealias Version = _2
 }
 
-struct Recipe_Ingredience: Sendable {
+struct Recipe_Ingredient: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
@@ -47,7 +47,7 @@ struct Recipe_Recipe: Sendable {
 
   var passiveTime: UInt32 = 0
 
-  var ingrediences: [Recipe_Ingredience] = []
+  var ingredients: [Recipe_Ingredient] = []
 
   var instructions: [String] = []
 
@@ -60,8 +60,8 @@ struct Recipe_Recipe: Sendable {
 
 fileprivate let _protobuf_package = "recipe"
 
-extension Recipe_Ingredience: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Ingredience"
+extension Recipe_Ingredient: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".Ingredient"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "amount"),
     2: .same(proto: "name"),
@@ -95,7 +95,7 @@ extension Recipe_Ingredience: SwiftProtobuf.Message, SwiftProtobuf._MessageImple
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Recipe_Ingredience, rhs: Recipe_Ingredience) -> Bool {
+  static func ==(lhs: Recipe_Ingredient, rhs: Recipe_Ingredient) -> Bool {
     if lhs.amount != rhs.amount {return false}
     if lhs.name != rhs.name {return false}
     if lhs.unit != rhs.unit {return false}
@@ -110,7 +110,7 @@ extension Recipe_Recipe: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementa
     1: .same(proto: "portions"),
     2: .standard(proto: "active_time"),
     3: .standard(proto: "passive_time"),
-    4: .same(proto: "ingrediences"),
+    4: .same(proto: "ingredients"),
     5: .same(proto: "instructions"),
   ]
 
@@ -123,7 +123,7 @@ extension Recipe_Recipe: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementa
       case 1: try { try decoder.decodeSingularUInt32Field(value: &self.portions) }()
       case 2: try { try decoder.decodeSingularUInt32Field(value: &self.activeTime) }()
       case 3: try { try decoder.decodeSingularUInt32Field(value: &self.passiveTime) }()
-      case 4: try { try decoder.decodeRepeatedMessageField(value: &self.ingrediences) }()
+      case 4: try { try decoder.decodeRepeatedMessageField(value: &self.ingredients) }()
       case 5: try { try decoder.decodeRepeatedStringField(value: &self.instructions) }()
       default: break
       }
@@ -140,8 +140,8 @@ extension Recipe_Recipe: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementa
     if self.passiveTime != 0 {
       try visitor.visitSingularUInt32Field(value: self.passiveTime, fieldNumber: 3)
     }
-    if !self.ingrediences.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.ingrediences, fieldNumber: 4)
+    if !self.ingredients.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.ingredients, fieldNumber: 4)
     }
     if !self.instructions.isEmpty {
       try visitor.visitRepeatedStringField(value: self.instructions, fieldNumber: 5)
@@ -153,7 +153,7 @@ extension Recipe_Recipe: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementa
     if lhs.portions != rhs.portions {return false}
     if lhs.activeTime != rhs.activeTime {return false}
     if lhs.passiveTime != rhs.passiveTime {return false}
-    if lhs.ingrediences != rhs.ingrediences {return false}
+    if lhs.ingredients != rhs.ingredients {return false}
     if lhs.instructions != rhs.instructions {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
